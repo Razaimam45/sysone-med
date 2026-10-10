@@ -1,0 +1,211 @@
+method,policy,dataset,is_average,parameter,selection_status,accuracy,coverage,n,accepted_n
+MedGemma-LL,Base,PubMedQA,False,,baseline,71.2,100.0,500,500
+MedGemma-LL,Conformal,PubMedQA,False,0.3,target_met,75.45045045045046,88.8,500,444
+MedGemma-LL,Routing,PubMedQA,False,0.7,target_met,72.54098360655738,97.6,500,488
+MedGemma-LL,Base,MedQA,False,,baseline,49.369085173501574,100.0,1268,1268
+MedGemma-LL,Conformal,MedQA,False,0.3,target_met,56.39464068209501,64.74763406940063,1268,821
+MedGemma-LL,Routing,MedQA,False,0.7,target_met,50.76271186440678,93.05993690851734,1268,1180
+MedGemma-LL,Base,MedMCQA,False,,baseline,60.050000000000004,100.0,2000,2000
+MedGemma-LL,Conformal,MedMCQA,False,0.3,target_met,65.76923076923077,78.0,2000,1560
+MedGemma-LL,Routing,MedMCQA,False,0.7,target_met,60.87628865979382,97.0,2000,1940
+MedGemma-LL,Base,VQA-RAD,False,,baseline,70.64220183486239,100.0,109,109
+MedGemma-LL,Conformal,VQA-RAD,False,0.3,target_met,77.41935483870968,85.3211009174312,109,93
+MedGemma-LL,Routing,VQA-RAD,False,0.7,target_met,71.29629629629629,99.08256880733946,109,108
+MedGemma-LL,Base,SLAKE,False,,baseline,79.43661971830987,100.0,355,355
+MedGemma-LL,Conformal,SLAKE,False,0.3,target_met,82.41042345276874,86.47887323943661,355,307
+MedGemma-LL,Routing,SLAKE,False,0.7,target_met,80.05780346820809,97.46478873239437,355,346
+MedGemma-LL,Base,PathVQA,False,,baseline,62.4,100.0,2000,2000
+MedGemma-LL,Conformal,PathVQA,False,0.3,target_met,67.11647727272727,70.39999999999999,2000,1408
+MedGemma-LL,Routing,PathVQA,False,0.7,target_met,63.133159268929504,95.75,2000,1915
+MedGemma-LL,Base,PMC-VQA,False,,baseline,48.93939393939394,100.0,1980,1980
+MedGemma-LL,Conformal,PMC-VQA,False,0.3,target_met,53.76344086021506,75.15151515151514,1980,1488
+MedGemma-LL,Routing,PMC-VQA,False,0.7,target_met,49.58289885297184,96.86868686868686,1980,1918
+MedGemma-LL,Base,Text Average,True,,baseline,60.206361724500525,100.0,3768,3768
+MedGemma-LL,Conformal,Text Average,True,0.3,target_met,66.86062511750586,77.18254468980021,3768,2825
+MedGemma-LL,Routing,Text Average,True,0.7,target_met,61.56218677416595,95.88664563617245,3768,3608
+MedGemma-LL,Base,Image Average,True,,baseline,65.35455387314155,100.0,4444,4444
+MedGemma-LL,Conformal,Image Average,True,0.3,target_met,70.89196033070579,79.33787232709574,4444,3296
+MedGemma-LL,Routing,Image Average,True,0.7,target_met,66.07736660842288,97.29151110210516,4444,4287
+MedGemma-LL,Base,Overall Average,True,,baseline,63.14818580943824,100.0,8212,8212
+MedGemma-LL,Conformal,Overall Average,True,0.3,target_met,69.19138167972723,78.41416048254051,8212,6121
+MedGemma-LL,Routing,Overall Average,True,0.7,target_met,64.1583558403585,96.6894259024197,8212,7895
+MedGemma-Head,Base,PubMedQA,False,,baseline,65.60000000000001,100.0,500,500
+MedGemma-Head,Conformal,PubMedQA,False,0.2,target_met,71.8918918918919,74.0,500,370
+MedGemma-Head,Routing,PubMedQA,False,0.5,target_met,70.95115681233933,77.8,500,389
+MedGemma-Head,Base,MedQA,False,,baseline,51.49842271293375,100.0,1268,1268
+MedGemma-Head,Conformal,MedQA,False,0.2,target_met,62.261380323054325,53.70662460567823,1268,681
+MedGemma-Head,Routing,MedQA,False,0.5,target_met,65.85760517799353,48.738170347003155,1268,618
+MedGemma-Head,Base,MedMCQA,False,,baseline,65.45,100.0,2000,2000
+MedGemma-Head,Conformal,MedMCQA,False,0.2,target_met,76.73003802281369,65.75,2000,1315
+MedGemma-Head,Routing,MedMCQA,False,0.5,target_met,76.59732540861812,67.30000000000001,2000,1346
+MedGemma-Head,Base,VQA-RAD,False,,baseline,76.14678899082568,100.0,109,109
+MedGemma-Head,Conformal,VQA-RAD,False,0.2,target_met,76.13636363636363,80.73394495412845,109,88
+MedGemma-Head,Routing,VQA-RAD,False,0.5,target_met,76.14678899082568,100.0,109,109
+MedGemma-Head,Base,SLAKE,False,,baseline,86.76056338028168,100.0,355,355
+MedGemma-Head,Conformal,SLAKE,False,0.2,target_met,87.683284457478,96.05633802816902,355,341
+MedGemma-Head,Routing,SLAKE,False,0.5,target_met,86.76056338028168,100.0,355,355
+MedGemma-Head,Base,PathVQA,False,,baseline,86.3,100.0,2000,2000
+MedGemma-Head,Conformal,PathVQA,False,0.2,target_met,89.22319474835886,91.4,2000,1828
+MedGemma-Head,Routing,PathVQA,False,0.5,target_met,86.3,100.0,2000,2000
+MedGemma-Head,Base,PMC-VQA,False,,baseline,57.07070707070707,100.0,1980,1980
+MedGemma-Head,Conformal,PMC-VQA,False,0.2,target_met,68.25259515570934,58.38383838383838,1980,1156
+MedGemma-Head,Routing,PMC-VQA,False,0.5,target_met,68.673647469459,57.878787878787875,1980,1146
+MedGemma-Head,Base,Text Average,True,,baseline,60.849474237644586,100.0,3768,3768
+MedGemma-Head,Conformal,Text Average,True,0.2,target_met,70.86264741972172,64.48554153522608,3768,2366
+MedGemma-Head,Routing,Text Average,True,0.5,target_met,71.63077919562807,64.61272344900105,3768,2353
+MedGemma-Head,Base,Image Average,True,,baseline,76.56951486045361,100.0,4444,4444
+MedGemma-Head,Conformal,Image Average,True,0.2,target_met,81.7859436479874,81.64353034153396,4444,3413
+MedGemma-Head,Routing,Image Average,True,0.5,target_met,80.74097624820669,89.46969696969697,4444,3610
+MedGemma-Head,Base,Overall Average,True,,baseline,69.83235459353547,100.0,8212,8212
+MedGemma-Head,Conformal,Overall Average,True,0.2,target_met,77.72236849544679,74.29010656740202,8212,5779
+MedGemma-Head,Routing,Overall Average,True,0.5,target_met,77.54023372644102,78.81670831797015,8212,5963
+MedGemma-Adapt,Base,PubMedQA,False,,baseline,72.6,100.0,500,500
+MedGemma-Adapt,Conformal,PubMedQA,False,0.1,target_met,75.56053811659194,89.2,500,446
+MedGemma-Adapt,Routing,PubMedQA,False,0.7,target_met,72.98969072164948,97.0,500,485
+MedGemma-Adapt,Base,MedQA,False,,baseline,53.31230283911672,100.0,1268,1268
+MedGemma-Adapt,Conformal,MedQA,False,0.1,target_met,63.481675392670155,60.252365930599375,1268,764
+MedGemma-Adapt,Routing,MedQA,False,0.7,target_met,57.08920187793427,83.99053627760253,1268,1065
+MedGemma-Adapt,Base,MedMCQA,False,,baseline,68.7,100.0,2000,2000
+MedGemma-Adapt,Conformal,MedMCQA,False,0.1,target_met,91.54362416107384,37.25,2000,745
+MedGemma-Adapt,Routing,MedMCQA,False,0.7,target_met,81.68279970215934,67.15,2000,1343
+MedGemma-Adapt,Base,VQA-RAD,False,,baseline,69.72477064220183,100.0,109,109
+MedGemma-Adapt,Conformal,VQA-RAD,False,0.1,target_met,74.48979591836734,89.90825688073394,109,98
+MedGemma-Adapt,Routing,VQA-RAD,False,0.7,target_met,70.37037037037037,99.08256880733946,109,108
+MedGemma-Adapt,Base,SLAKE,False,,baseline,90.70422535211267,100.0,355,355
+MedGemma-Adapt,Conformal,SLAKE,False,0.1,target_met,92.64705882352942,95.77464788732394,355,340
+MedGemma-Adapt,Routing,SLAKE,False,0.7,target_met,91.61849710982659,97.46478873239437,355,346
+MedGemma-Adapt,Base,PathVQA,False,,baseline,90.05,100.0,2000,2000
+MedGemma-Adapt,Conformal,PathVQA,False,0.1,target_met,93.86363636363636,88.0,2000,1760
+MedGemma-Adapt,Routing,PathVQA,False,0.7,target_met,90.95607235142118,96.75,2000,1935
+MedGemma-Adapt,Base,PMC-VQA,False,,baseline,57.22222222222222,100.0,1980,1980
+MedGemma-Adapt,Conformal,PMC-VQA,False,0.1,target_met,71.19565217391305,46.464646464646464,1980,920
+MedGemma-Adapt,Routing,PMC-VQA,False,0.7,target_met,61.53846153846154,78.78787878787878,1980,1560
+MedGemma-Adapt,Base,Text Average,True,,baseline,64.87076761303891,100.0,3768,3768
+MedGemma-Adapt,Conformal,Text Average,True,0.1,target_met,74.85133391850759,62.23412197686646,3768,1955
+MedGemma-Adapt,Routing,Text Average,True,0.7,target_met,69.960164275485,82.71351209253416,3768,2893
+MedGemma-Adapt,Base,Image Average,True,,baseline,76.92530455413417,100.0,4444,4444
+MedGemma-Adapt,Conformal,Image Average,True,0.1,target_met,84.76893809316206,80.03688780817609,4444,3118
+MedGemma-Adapt,Routing,Image Average,True,0.7,target_met,79.41873660226385,93.02130908190315,4444,3949
+MedGemma-Adapt,Base,Overall Average,True,,baseline,71.75907443652193,100.0,8212,8212
+MedGemma-Adapt,Conformal,Overall Average,True,0.1,target_met,81.1157064341055,72.40713102332911,8212,5073
+MedGemma-Adapt,Routing,Overall Average,True,0.7,target_met,75.63454169574013,88.60368180074502,8212,6842
+MedGemma-NAR,Base,PubMedQA,False,,baseline,64.0,100.0,500,500
+MedGemma-NAR,Conformal,PubMedQA,False,0.3,target_met,64.2570281124498,99.6,500,498
+MedGemma-NAR,Routing,PubMedQA,False,0.3,target_unmet,64.0,100.0,500,500
+MedGemma-NAR,Base,MedQA,False,,baseline,30.441640378548897,100.0,1268,1268
+MedGemma-NAR,Conformal,MedQA,False,0.3,target_met,31.72043010752688,29.33753943217666,1268,372
+MedGemma-NAR,Routing,MedQA,False,0.3,target_unmet,,0.0,1268,0
+MedGemma-NAR,Base,MedMCQA,False,,baseline,40.8,100.0,2000,2000
+MedGemma-NAR,Conformal,MedMCQA,False,0.3,target_met,54.629629629629626,27.0,2000,540
+MedGemma-NAR,Routing,MedMCQA,False,0.3,target_unmet,78.94736842105262,2.85,2000,57
+MedGemma-NAR,Base,VQA-RAD,False,,baseline,55.96330275229357,100.0,109,109
+MedGemma-NAR,Conformal,VQA-RAD,False,0.3,target_met,56.730769230769226,95.41284403669725,109,104
+MedGemma-NAR,Routing,VQA-RAD,False,0.3,target_unmet,55.96330275229357,100.0,109,109
+MedGemma-NAR,Base,SLAKE,False,,baseline,80.0,100.0,355,355
+MedGemma-NAR,Conformal,SLAKE,False,0.3,target_met,80.39772727272728,99.15492957746478,355,352
+MedGemma-NAR,Routing,SLAKE,False,0.3,target_unmet,80.0,100.0,355,355
+MedGemma-NAR,Base,PathVQA,False,,baseline,86.85000000000001,100.0,2000,2000
+MedGemma-NAR,Conformal,PathVQA,False,0.3,target_met,87.07070707070706,99.0,2000,1980
+MedGemma-NAR,Routing,PathVQA,False,0.3,target_unmet,86.85000000000001,100.0,2000,2000
+MedGemma-NAR,Base,PMC-VQA,False,,baseline,45.35353535353535,100.0,1980,1980
+MedGemma-NAR,Conformal,PMC-VQA,False,0.3,target_met,49.36619718309859,71.71717171717171,1980,1420
+MedGemma-NAR,Routing,PMC-VQA,False,0.3,target_unmet,50.76687116564417,65.85858585858585,1980,1304
+MedGemma-NAR,Base,Text Average,True,,baseline,45.08054679284963,100.0,3768,3768
+MedGemma-NAR,Conformal,Text Average,True,0.3,target_met,56.468759229813756,51.979179810725554,3768,1410
+MedGemma-NAR,Routing,Text Average,True,0.3,target_unmet,64.41419543023821,34.28333333333333,3768,557
+MedGemma-NAR,Base,Image Average,True,,baseline,67.04170952645723,100.0,4444,4444
+MedGemma-NAR,Conformal,Image Average,True,0.3,target_met,69.93192407600039,91.32123633283344,4444,3856
+MedGemma-NAR,Routing,Image Average,True,0.3,target_unmet,70.04007999027351,91.46464646464648,4444,3768
+MedGemma-NAR,Base,Overall Average,True,,baseline,57.62978264062541,100.0,8212,8212
+MedGemma-NAR,Conformal,Overall Average,True,0.3,target_met,65.9040610032155,74.46035496621577,8212,5266
+MedGemma-NAR,Routing,Overall Average,True,0.3,target_unmet,68.80557683744625,66.9583694083694,8212,4325
+Qwen-LL,Base,PubMedQA,False,,baseline,68.2,100.0,500,500
+Qwen-LL,Conformal,PubMedQA,False,0.3,target_met,71.49758454106279,82.8,500,414
+Qwen-LL,Routing,PubMedQA,False,0.5,target_met,71.14967462039046,92.2,500,461
+Qwen-LL,Base,MedQA,False,,baseline,43.769716088328074,100.0,1268,1268
+Qwen-LL,Conformal,MedQA,False,0.3,target_met,48.03921568627451,64.35331230283911,1268,816
+Qwen-LL,Routing,MedQA,False,0.5,target_met,50.18679950186801,63.32807570977918,1268,803
+Qwen-LL,Base,MedMCQA,False,,baseline,52.949999999999996,100.0,2000,2000
+Qwen-LL,Conformal,MedMCQA,False,0.3,target_met,46.783625730994146,51.300000000000004,2000,1026
+Qwen-LL,Routing,MedMCQA,False,0.5,target_met,62.75752773375595,63.1,2000,1262
+Qwen-LL,Base,VQA-RAD,False,,baseline,65.13761467889908,100.0,109,109
+Qwen-LL,Conformal,VQA-RAD,False,0.3,target_met,74.39024390243901,75.22935779816514,109,82
+Qwen-LL,Routing,VQA-RAD,False,0.5,target_met,65.13761467889908,100.0,109,109
+Qwen-LL,Base,SLAKE,False,,baseline,71.26760563380282,100.0,355,355
+Qwen-LL,Conformal,SLAKE,False,0.3,target_met,75.73770491803279,85.91549295774648,355,305
+Qwen-LL,Routing,SLAKE,False,0.5,target_met,71.26760563380282,100.0,355,355
+Qwen-LL,Base,PathVQA,False,,baseline,61.85000000000001,100.0,2000,2000
+Qwen-LL,Conformal,PathVQA,False,0.3,target_met,65.58651976668828,77.14999999999999,2000,1543
+Qwen-LL,Routing,PathVQA,False,0.5,target_met,61.85000000000001,100.0,2000,2000
+Qwen-LL,Base,PMC-VQA,False,,baseline,49.14141414141414,100.0,1980,1980
+Qwen-LL,Conformal,PMC-VQA,False,0.3,target_met,56.401673640167374,60.35353535353535,1980,1195
+Qwen-LL,Routing,PMC-VQA,False,0.5,target_met,56.15567911040509,63.58585858585859,1980,1259
+Qwen-LL,Base,Text Average,True,,baseline,54.97323869610936,100.0,3768,3768
+Qwen-LL,Conformal,Text Average,True,0.3,target_met,57.50210221953055,66.15110410094637,3768,2256
+Qwen-LL,Routing,Text Average,True,0.5,target_met,62.65541785525163,72.87602523659307,3768,2526
+Qwen-LL,Base,Image Average,True,,baseline,61.849158613529006,100.0,4444,4444
+Qwen-LL,Conformal,Image Average,True,0.3,target_met,68.86832104042732,74.66209652736174,4444,3125
+Qwen-LL,Routing,Image Average,True,0.5,target_met,64.34856733145573,90.89646464646465,4444,3723
+Qwen-LL,Base,Overall Average,True,,baseline,58.90233579177773,100.0,8212,8212
+Qwen-LL,Conformal,Overall Average,True,0.3,target_met,64.3306906509712,71.0145283446123,8212,5381
+Qwen-LL,Routing,Overall Average,True,0.5,target_met,63.712770092560454,83.17341918509112,8212,6249
+Qwen-Head,Base,PubMedQA,False,,baseline,65.60000000000001,100.0,500,500
+Qwen-Head,Conformal,PubMedQA,False,0.3,target_met,69.88764044943821,89.0,500,445
+Qwen-Head,Routing,PubMedQA,False,0.5,target_met,70.70707070707071,79.2,500,396
+Qwen-Head,Base,MedQA,False,,baseline,44.873817034700316,100.0,1268,1268
+Qwen-Head,Conformal,MedQA,False,0.3,target_met,51.105651105651106,64.1955835962145,1268,814
+Qwen-Head,Routing,MedQA,False,0.5,target_met,63.03724928366762,27.523659305993693,1268,349
+Qwen-Head,Base,MedMCQA,False,,baseline,55.85,100.0,2000,2000
+Qwen-Head,Conformal,MedMCQA,False,0.3,target_met,62.69946808510638,75.2,2000,1504
+Qwen-Head,Routing,MedMCQA,False,0.5,target_met,73.91742195367573,49.65,2000,993
+Qwen-Head,Base,VQA-RAD,False,,baseline,70.64220183486239,100.0,109,109
+Qwen-Head,Conformal,VQA-RAD,False,0.3,target_met,75.26881720430107,85.3211009174312,109,93
+Qwen-Head,Routing,VQA-RAD,False,0.5,target_met,70.64220183486239,100.0,109,109
+Qwen-Head,Base,SLAKE,False,,baseline,78.30985915492957,100.0,355,355
+Qwen-Head,Conformal,SLAKE,False,0.3,target_met,80.12048192771084,93.52112676056338,355,332
+Qwen-Head,Routing,SLAKE,False,0.5,target_met,78.30985915492957,100.0,355,355
+Qwen-Head,Base,PathVQA,False,,baseline,84.8,100.0,2000,2000
+Qwen-Head,Conformal,PathVQA,False,0.3,target_met,85.66233766233766,96.25,2000,1925
+Qwen-Head,Routing,PathVQA,False,0.5,target_met,84.8,100.0,2000,2000
+Qwen-Head,Base,PMC-VQA,False,,baseline,56.666666666666664,100.0,1980,1980
+Qwen-Head,Conformal,PMC-VQA,False,0.3,target_met,62.58675078864353,80.05050505050505,1980,1585
+Qwen-Head,Routing,PMC-VQA,False,0.5,target_met,71.0820895522388,54.141414141414145,1980,1072
+Qwen-Head,Base,Text Average,True,,baseline,55.44127234490011,100.0,3768,3768
+Qwen-Head,Conformal,Text Average,True,0.3,target_met,62.241821290748526,76.13186119873816,3768,2763
+Qwen-Head,Routing,Text Average,True,0.5,target_met,70.37640368404968,52.1245531019979,3768,1738
+Qwen-Head,Base,Image Average,True,,baseline,72.60468191411465,100.0,4444,4444
+Qwen-Head,Conformal,Image Average,True,0.3,target_met,76.50466869041857,88.78568318212491,4444,3935
+Qwen-Head,Routing,Image Average,True,0.5,target_met,76.87237318308445,88.53535353535354,4444,3536
+Qwen-Head,Base,Overall Average,True,,baseline,65.24893495587983,100.0,8212,8212
+Qwen-Head,Conformal,Overall Average,True,0.3,target_met,70.92222232064377,83.36261661781631,8212,6698
+Qwen-Head,Routing,Overall Average,True,0.5,target_met,74.88262092279425,72.93072477820111,8212,5274
+Qwen-Adapt,Base,PubMedQA,False,,baseline,68.60000000000001,100.0,500,500
+Qwen-Adapt,Conformal,PubMedQA,False,0.2,target_met,72.44444444444444,90.0,500,450
+Qwen-Adapt,Routing,PubMedQA,False,0.7,target_met,71.30434782608695,92.0,500,460
+Qwen-Adapt,Base,MedQA,False,,baseline,45.42586750788644,100.0,1268,1268
+Qwen-Adapt,Conformal,MedQA,False,0.2,target_met,54.02124430955993,51.97160883280757,1268,659
+Qwen-Adapt,Routing,MedQA,False,0.7,target_met,53.92296718972895,55.283911671924294,1268,701
+Qwen-Adapt,Base,MedMCQA,False,,baseline,56.39999999999999,100.0,2000,2000
+Qwen-Adapt,Conformal,MedMCQA,False,0.2,target_met,68.64820846905538,61.4,2000,1228
+Qwen-Adapt,Routing,MedMCQA,False,0.7,target_met,66.34109691960933,66.55,2000,1331
+Qwen-Adapt,Base,VQA-RAD,False,,baseline,66.05504587155964,100.0,109,109
+Qwen-Adapt,Conformal,VQA-RAD,False,0.2,target_met,71.59090909090908,80.73394495412845,109,88
+Qwen-Adapt,Routing,VQA-RAD,False,0.7,target_met,69.14893617021276,86.23853211009175,109,94
+Qwen-Adapt,Base,SLAKE,False,,baseline,85.07042253521126,100.0,355,355
+Qwen-Adapt,Conformal,SLAKE,False,0.2,target_met,88.9908256880734,92.11267605633803,355,327
+Qwen-Adapt,Routing,SLAKE,False,0.7,target_met,86.54970760233918,96.3380281690141,355,342
+Qwen-Adapt,Base,PathVQA,False,,baseline,86.3,100.0,2000,2000
+Qwen-Adapt,Conformal,PathVQA,False,0.2,target_met,90.02242152466367,89.2,2000,1784
+Qwen-Adapt,Routing,PathVQA,False,0.7,target_met,88.32351365827532,93.35,2000,1867
+Qwen-Adapt,Base,PMC-VQA,False,,baseline,57.32323232323232,100.0,1980,1980
+Qwen-Adapt,Conformal,PMC-VQA,False,0.2,target_met,65.76297443841982,65.20202020202021,1980,1291
+Qwen-Adapt,Routing,PMC-VQA,False,0.7,target_met,64.82014388489209,70.2020202020202,1980,1390
+Qwen-Adapt,Base,Text Average,True,,baseline,56.8086225026288,100.0,3768,3768
+Qwen-Adapt,Conformal,Text Average,True,0.2,target_met,66.59027312436405,67.79053627760251,3768,2337
+Qwen-Adapt,Routing,Text Average,True,0.7,target_met,65.26594610782418,71.2779705573081,3768,2492
+Qwen-Adapt,Base,Image Average,True,,baseline,73.6871751825008,100.0,4444,4444
+Qwen-Adapt,Conformal,Image Average,True,0.2,target_met,80.35137534202383,81.81216030312167,4444,3490
+Qwen-Adapt,Routing,Image Average,True,0.7,target_met,78.2854623970882,86.53214512028151,4444,3693
+Qwen-Adapt,Base,Overall Average,True,,baseline,66.45350974826995,100.0,8212,8212
+Qwen-Adapt,Conformal,Overall Average,True,0.2,target_met,75.07713732136916,75.80289286361347,8212,5827
+Qwen-Adapt,Routing,Overall Average,True,0.7,target_met,73.31367565204185,79.99464173615004,8212,6185

@@ -1,0 +1,36 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.conda/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Large data & model weights (not for git) ----
+data/
+models/
+tta_results/
+
+# ---- Build artifacts (regenerate with: python demo2/build_pages.py) ----
+demo2/site/
+
+# ---- Notebooks / caches ----
+.ipynb_checkpoints/
+.cache/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ---- Logs ----
+*.log

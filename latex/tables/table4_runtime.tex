@@ -1,0 +1,104 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.1pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{Inference latency in milliseconds ($\downarrow$).
+We report median (p50) and tail (p95) latency.
+Dashes denote unavailable results for text-only methods on image tasks.
+Text Avg. and Image Avg. macro-average datasets within each modality; Overall Avg. macro-averages all available datasets per method.}
+\label{tab:runtime}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cc cc cc cc cc | cc cc cc}
+\toprule
+&
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{MedGemma-AR}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{MedGemma-LL}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{Jev}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{MedJev}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{Laya}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{MedGemma-Head}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{MedGemma-LoRA}}} &
+\multicolumn{2}{c}{\textcolor{PaperInk}{\textbf{Laya-Med}}} \\
+
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+\cmidrule(lr){8-9}
+\cmidrule(lr){10-11}
+\cmidrule(lr){12-13}
+\cmidrule(lr){14-15}
+\cmidrule(lr){16-17}
+
+\textcolor{PaperInk}{\textbf{Dataset}} &
+p50 & p95 & p50 & p95 & p50 & p95 & p50 & p95 &
+p50 & p95 & p50 & p95 & p50 & p95 & p50 & p95 \\
+\midrule
+
+PubMedQA
+& 1087 & 1176 & 55 & 126 & 598 & 723 & 94 & 117
+& 18 & 20 & 142 & 256 & 161 & 332 & 19 & 20 \\
+
+MedQA
+& 1141 & 1370 & 55 & 91 & 589 & 709 & 90 & 103
+& 19 & 39 & 189 & 331 & 206 & 418 & 20 & 25 \\
+
+MedMCQA
+& 1123 & 1344 & 38 & 116 & 592 & 663 & 78 & 87
+& 18 & 37 & 53 & 104 & 62 & 117 & 5 & 13 \\
+
+\midrule
+Text Avg.
+& 1117 & 1297
+& 49 & 111
+& 593 & 698
+& 87 & 102
+& 18 & 32
+& 128 & 230
+& 143 & 289
+& 15 & 19 \\
+\midrule
+
+VQA-RAD
+& 1230 & 1396 & 163 & 317 & -- & -- & -- & --
+& -- & -- & 290 & 537 & 286 & 551 & 4 & 10 \\
+
+SLAKE
+& 1267 & 1538 & 164 & 322 & -- & -- & -- & --
+& -- & -- & 301 & 550 & 299 & 548 & 4 & 4 \\
+
+PathVQA
+& 1337 & 1476 & 168 & 321 & -- & -- & -- & --
+& -- & -- & 295 & 569 & 297 & 567 & 6 & 7 \\
+
+PMC-VQA
+& 1288 & 1503 & 158 & 315 & -- & -- & -- & --
+& -- & -- & 561 & 1010 & 568 & 1050 & 7 & 8 \\
+
+\midrule
+Image Avg.
+& 1281 & 1478
+& 163 & 319
+& -- & --
+& -- & --
+& -- & --
+& 362 & 667
+& 363 & 679
+& 5 & 7 \\
+\midrule
+
+Overall Avg.
+& 1210 & 1400
+& 114 & 230
+& 593 & 698
+& 87 & 102
+& 18 & 32
+& 262 & 480
+& 268 & 512
+& 9 & 12 \\
+
+\bottomrule
+\end{tabular}
+}
+\end{table*}

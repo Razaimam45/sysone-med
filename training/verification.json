@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "device": "NVIDIA RTX A6000",
+  "train_datasets": [
+    "med_qa",
+    "medmcqa",
+    "path_vqa",
+    "pmc_vqa",
+    "pubmedqa",
+    "slake",
+    "vqarad"
+  ],
+  "mixed_batch_examples": 7,
+  "candidate_counts": [
+    5,
+    4,
+    2,
+    4,
+    3,
+    2,
+    2
+  ],
+  "unique_image_encodings": 4,
+  "loss": 1.0857282876968384,
+  "text_trainable_parameters": 442368,
+  "checks": [
+    "all prepared split/image fingerprints",
+    "mixed-modality FP16 forward/backward/optimizer update",
+    "frozen base text/vision gradients",
+    "LoRA and visual projection gradients",
+    "text prediction batch invariance",
+    "Final post-sanitization manifest/source fingerprints, all image paths, and empty MedMCQA/SLAKE annotation contexts"
+  ],
+  "split_counts": {
+    "train": 145017,
+    "validation": 5953,
+    "calibration": 5944,
+    "test": 19586
+  },
+  "elapsed_seconds": 141.20406699180603,
+  "final_manifest_sha256": "dc1a4fa88e008cd69015dc3744d375340e6ef919abdc925718e48a6c445ea287",
+  "data_layout": "sources/normalized/prepared/models/cache/manifests",
+  "full_training_started": false
+}

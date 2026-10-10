@@ -1,0 +1,50 @@
+% Optional standalone aggregator; do not also include section.tex.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{\LayaMainFigure}
+\caption{Laya-Med direct multimodal decision architecture. Candidate-conditioned text representations and a shared image representation feed lightweight fusion and a shared scoring head. Candidate logits define a bounded decision distribution without output-token generation. Supplied architecture artwork.}
+\label{fig:main}
+\end{figure*}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures2/figure2_inference_paths.png}
+\caption{Inference mechanisms at single-column width. (a) An AR VLM generates a token sequence with feedback between steps. (b) The same backbone scores allowed answer labels without an iterative output loop. (c) Laya-Med encodes candidate-conditioned evidence and applies a shared direct scorer in parallel. Arrows show information flow; illustrative bars are not measured probabilities. The pending learned-head baseline is specified in Table~\ref{tab:accuracy}(a).}
+\label{fig:paths}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures2/figure3_error_overlap.png}
+\caption{Paired error decomposition for Laya-Med and MedGemma (LL). Each bar contains the same 50 examples and sums to 100\%. Numeric labels are omitted for segments below 8\% to preserve legibility. This analysis measures error overlap, not ensemble performance.}
+\label{fig:overlap}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures2/figure4_reliability.png}
+\caption{Reliability by decision mechanism and input modality: MedGemma (LL) versus Laya-Med, with 150 text or 200 image examples per panel. The dotted diagonal denotes equality between confidence and accuracy. Marker size and within-panel color intensity encode bin occupancy; empty bins are omitted. Lines connect observed bin means and do not imply interpolation accuracy.}
+\label{fig:reliability}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures2/figure5_selective_risk.png}
+\caption{Selective risk versus retained coverage. Confidence ranks examples separately within each dataset; curves then average the three text tasks or four image tasks equally. Each task contributes 50 examples, yielding 2\% coverage increments. Lower risk at the same coverage is preferable. Curves use observed decisions without smoothing or synthetic confidence bands.}
+\label{fig:selective}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures2/figure7_tta_methods.png}
+\caption{The three test-time adaptation mechanisms on the matched pilot, one panel per mechanism. (a) Accuracy among retained decisions against retained coverage, macro-averaged over each pipeline's own datasets; the marker is the 80\%-retention operating point tabulated in Table~\ref{tab:tta_main}, the dashed rule and shaded band mark that operating region, and curves use observed decisions without smoothing. (b) Realised conformal coverage against the target $1-\alpha$; the dashed diagonal is exact calibration, the shaded region lies at or above target, and the highlighted marker is the $\alpha=0.1$ operating point. (c) Static fitted temperature against the mean online window temperature on logarithmic axes; the arrow spans the shift the refit introduces, the vertical bar spans the range over refit windows where more than one window exists, the gold rule marks the upper bound of the temperature search grid at 20, and the shaded region marks an online temperature above the static fit. In all three panels solid lines are the three Laya-Med pipelines and dashed lines the two external references, with marker shapes and colours following the paper's shared pipeline identity. Zero drift alarms fired in any run, so panel (c) characterises where each interface sits rather than detected shift.}
+\label{fig:tta_methods}
+\end{figure*}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures2/figure6_latency_distribution.png}
+\caption{Within-backbone latency comparison for MedGemma, with 50 requests per inference-mechanism--dataset pair. Boxes show the interquartile range, central lines the median, whiskers the 10th--90th percentiles, and points observations outside that range. The logarithmic axis preserves both text and image timing scales.}
+\label{fig:latency}
+\end{figure}

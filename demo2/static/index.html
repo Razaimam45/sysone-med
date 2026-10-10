@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SysOne-Med · The Study</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="/" class="brand"><span class="logo">S.</span> SYSONE-MED <span class="divider">/</span> <span class="muted">biomedia</span></a>
+  <nav>
+    <a href="#paths">The paths</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#apps">Applications</a>
+    <a href="/vqa/" class="cta">Open VQA →</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="glow"></div>
+  <div class="wrap">
+    <p class="eyebrow">System One · direct medical decisions</p>
+    <h1>Same question. Five ways to decide.</h1>
+    <p class="lede">
+      How medical vision-language models reach a multiple-choice answer — five decision paths,
+      from slow autoregressive writing to a single non-autoregressive scoring pass.
+    </p>
+    <div class="chips">
+      <span class="chip"><b>5</b> decision variants</span>
+      <span class="chip"><b>7</b> medical datasets</span>
+      <span class="chip"><b>2</b> live applications</span>
+      <span class="chip">saved measurements · no live GPU</span>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="block" style="padding-top:40px;padding-bottom:0">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n" id="statFastest">—</div><div class="l">Fastest decision (mean latency)</div></div>
+      <div class="stat"><div class="n" id="statSlowest">—</div><div class="l">Slowest decision (mean latency)</div></div>
+      <div class="stat"><div class="n" id="statSpread">—</div><div class="l">Speed spread across variants</div></div>
+      <div class="stat"><div class="n" id="statAcc">—</div><div class="l">Best held-out accuracy (SLAKE)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FIVE PATHS -->
+<section class="block" id="paths">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The comparison</p>
+      <h2>Five decision paths, one question</h2>
+      <p>Each path's measured mean decision latency and held-out accuracy, ranked by speed.</p>
+    </div>
+    <div class="variants" id="variantGrid"><!-- populated by home.js --></div>
+  </div>
+</section>
+
+<!-- EVIDENCE / FIGURES -->
+<section class="block alt" id="evidence">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">From the paper</p>
+      <h2>The evidence</h2>
+      <p>Figures from the SysOne study.</p>
+    </div>
+    <div class="figures">
+      <figure class="fig">
+        <div class="img"><img src="/figures/decision_formulations_refined-1.png" alt="Four decision formulations" loading="lazy"></div>
+        <figcaption class="cap"><h3>Four decision formulations</h3>
+          <p>AR generation, label likelihood, and learned heads on AR and NAR backbones — same inputs, different decision interfaces.</p></figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="img"><img src="/figures/layamed_multimodal_nar-1.png" alt="NAR direct decision architecture" loading="lazy"></div>
+        <figcaption class="cap"><h3>Direct decision architecture</h3>
+          <p>Text and image are encoded once, fused, and scored by a shared head — batched candidate scoring, no autoregressive decoding.</p></figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="img"><img src="/figures/accuracy_latency_pareto-1.png" alt="Accuracy versus latency" loading="lazy"></div>
+        <figcaption class="cap"><h3>Accuracy vs. latency</h3>
+          <p>Held-out accuracy against p50 decision latency across image and text tasks. Upper-left is better.</p></figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="img"><img src="/figures/ece_nll_pareto-1.png" alt="Calibration versus latency" loading="lazy"></div>
+        <figcaption class="cap"><h3>Calibration vs. latency</h3>
+          <p>ECE and NLL against latency. Lower-left is better — direct scoring stays calibrated without the generation cost.</p></figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="img"><img src="/figures/posthoc_tta_final-1.png" alt="Post-hoc test-time adaptation" loading="lazy"></div>
+        <figcaption class="cap"><h3>Post-hoc test-time adaptation</h3>
+          <p>Routing and conformal TTA over candidate scores — no weight updates, with a marginal coverage guarantee.</p></figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="img"><img src="/figures/visual_dependence_ablation-1.png" alt="Visual dependence ablation" loading="lazy"></div>
+        <figcaption class="cap"><h3>Visual dependence</h3>
+          <p>Accuracy change when the image is missing or shuffled — how much each path actually relies on the visual input.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM STRIP -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Under the hood</p>
+      <h2>How each path reaches a decision</h2>
+    </div>
+    <div class="mech">
+      <div class="m"><div class="k">Autoregressive</div><h4>AR Gen · AR LL</h4>
+        <p>Writes text — up to 32 tokens, or exactly one — then parses it into a choice.</p></div>
+      <div class="m"><div class="k">Learned head</div><h4>AR Head</h4>
+        <p>A frozen backbone feeds a small head that scores every option at once.</p></div>
+      <div class="m"><div class="k">Non-autoregressive</div><h4>NAR</h4>
+        <p>Text and image are encoded, fused, and scored in a single forward pass.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="block alt" id="apps">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Try it</p>
+      <h2>Two applications</h2>
+      <p>The same five variants in two settings.</p>
+    </div>
+    <div class="apps">
+      <a class="app vqa" href="/vqa/">
+        <div class="top">
+          <div class="icon">🩻</div>
+          <h3>Medical VQA / QA</h3>
+          <p>Step through held-out SLAKE and MedQA cases — each variant's prediction, confidence, and latency.</p>
+        </div>
+        <div class="go"><span class="btn">Open observatory →</span><small>SLAKE · MedQA</small></div>
+      </a>
+      <a class="app snake" href="/snake">
+        <div class="top">
+          <div class="icon">🐍</div>
+          <h3>Snake race</h3>
+          <p>Five snakes, one clock. Each moves at its measured decision speed.</p>
+        </div>
+        <div class="go"><span class="btn">Start the race →</span><small>side-by-side</small></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><b>biomedia</b> · SysOne-Med</span>
+    <span>Inspect the decision. Understand the trade-off.</span>
+  </div>
+</footer>
+
+<script src="home.js"></script>
+</body>
+</html>

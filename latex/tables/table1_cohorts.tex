@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\caption{Baseline taxonomy. AR/NAR describe the backbone architecture; LL denotes candidate-label likelihood scoring.}
+\label{tab:cohorts}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llllll@{}}
+\toprule
+\textcolor{PaperInk}{\textbf{Method}} & \textcolor{PaperInk}{\textbf{Modality}} & \textcolor{PaperInk}{\textbf{Backbone}} & \textcolor{PaperInk}{\textbf{Decision mechanism}} & \textcolor{PaperInk}{\textbf{Adaptation}} & \textcolor{PaperInk}{\textbf{Progress}} \\
+\midrule
+AR & Text + Image & AR VLM & Autoregressive generation & Medical pretraining & 2025 \\
+LL & Text + Image & AR VLM & Candidate-label likelihood & None & 2025-26 \\
+Jev & Text / structured state & Undisclosed & Direct decision & Proprietary & 2026 \\
+MedJev & Text only & Causal/AR LM & Direct decision & LoRA & 2026 \\
+Direct-Head & Text + Image & Frozen AR VLM & Learned direct scoring & None & Ours \\
+Direct-LoRA & Text + Image & AR VLM & Learned direct scoring & LoRA & Ours \\
+Laya & Text only & NAR & Direct decision modeling & Decision-model training & 2026 \\
+LayaMed & Text + Image & NAR multimodal & Direct decision modeling & Decision-model training & Ours \\
+\bottomrule
+\end{tabular*}
+\end{table*}

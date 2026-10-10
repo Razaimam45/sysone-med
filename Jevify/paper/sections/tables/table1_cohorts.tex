@@ -1,0 +1,59 @@
+\begin{table*}[t]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.13}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lll|lllll@{}}
+\toprule
+\textbf{Method} &
+\textbf{Modality} &
+\textbf{Formulation} &
+\textbf{Backbone} &
+\textbf{Decision} &
+\textbf{AR decode?} &
+\textbf{Learned head?} &
+\textbf{Adaptation} \\
+\midrule
+
+AR-Gen
+& Text + Image & \textbf{(a)} & AR VLM
+& Generation & Yes & No & -- \\
+
+AR-LL
+& Text + Image & \textbf{(b)} & AR VLM
+& Label likelihood & No & No & None \\
+
+Jev
+& Text / structured & \textbf{--}
+& Undisclosed & Direct & No & Undisclosed & Proprietary \\
+
+MedJev
+& Text only & \textbf{(c)}
+& Causal/AR LM & Direct & No & Yes & LoRA + head \\
+
+NAR (Laya)
+& Text only & \textbf{(d)}
+& NAR encoder & Direct & No & Yes & Decision training \\
+
+\midrule
+
+AR-Head
+& Text + Image & \textbf{(c)}
+& AR VLM & Direct & No & Yes & Head only \\
+
+AR-Adapt
+& Text + Image & \textbf{(c)}
+& AR VLM & Direct & No & Yes & LoRA + head \\
+
+NAR-Med (Laya-Med)
+& Text + Image & \textbf{(d)}
+& NAR encoders & Direct & No & Yes & Decision training \\
+
+\bottomrule
+\end{tabular}%
+}
+
+\caption{Baseline taxonomy. Formulations \textbf{(a)--(d)} correspond to the design formulations in Fig.~\ref{fig:decision_formulations}. Jev is left unassigned because its internal architecture is undisclosed. The bottom three rows are controlled configurations constructed in this study.}
+\label{tab:cohorts}
+\end{table*}

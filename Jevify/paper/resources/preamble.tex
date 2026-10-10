@@ -1,0 +1,111 @@
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+\newsavebox\fittobox
+\newcommand{\fitto}[2]{\sbox\fittobox{#2}\ifdim\wd\fittobox>#1\resizebox{#1}{!}{\usebox\fittobox}\else\usebox\fittobox\fi}
+\definecolor{tabF4867C}{HTML}{F4867C}
+\definecolor{tabF7AE85}{HTML}{F7AE85}
+\definecolor{tabF9D38B}{HTML}{F9D38B}
+\definecolor{tabE6EE8E}{HTML}{E6EE8E}
+\definecolor{tabBDE69A}{HTML}{BDE69A}
+\definecolor{tab86DCA1}{HTML}{86DCA1}
+\definecolor{tab53C98C}{HTML}{53C98C}
+\definecolor{grp1F8AFF}{HTML}{1F8AFF}
+\definecolor{grp986BF6}{HTML}{986BF6}
+\definecolor{grpD152BB}{HTML}{D152BB}
+\definecolor{grpEC4764}{HTML}{EC4764}
+\definecolor{grpFF8506}{HTML}{FF8506}
+\definecolor{grpF2CB04}{HTML}{F2CB04}
+\definecolor{grp59AA03}{HTML}{59AA03}
+\definecolor{grp00B89A}{HTML}{00B89A}
+\definecolor{grp06B1CE}{HTML}{06B1CE}
+
+\definecolor{lat0}{RGB}{246,250,253}
+\definecolor{lat1}{RGB}{235,244,250}
+\definecolor{lat2}{RGB}{222,237,247}
+\definecolor{lat3}{RGB}{207,228,242}
+\definecolor{lat4}{RGB}{190,217,236}
+\definecolor{lat5}{RGB}{169,204,228}
+\definecolor{lat6}{RGB}{145,190,218}
+
+\newcommand{\todo}[1]{{\color{red}#1}}
+\newcommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
+
+\newcommand{\bluetext}[1]{{\color{rqblue}#1}}
+\newcommand{\greenbold}[1]{\textbf{\color{green!45!black}#1}}
+
+\newcommand{\ie}{\textit{i.e.}\xspace}
+\newcommand{\eg}{\textit{e.g.}\xspace}
+\newcommand{\vs}{vs.\xspace}
+
+\newcommand{\vstar}{V$^{*}$Bench\xspace}
+
+\newcommand{\figplaceholder}[2][4cm]{%
+  \fcolorbox{gray!60}{gray!8}{%
+    \parbox[c][#1][c]{0.95\linewidth}{\centering\sffamily\small\color{gray!80!black}%
+      Figure placeholder\\[0.3em]\normalfont\small #2}}%
+}
+
+\newlist{checklist}{itemize}{1}
+\setlist[checklist]{label=$\square$}
+
+% Keep restored figures and tables near the analysis that introduces them.
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.7}
+\renewcommand{\dblfloatpagefraction}{0.7}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{rqblue}{HTML}{0055BE}
+\definecolor{rqbg}{HTML}{E8F5FD}
+\usetikzlibrary{calc,backgrounds}
+\newcommand{\researchquestion}[3][]{%
+\par\vspace{-6pt}%
+\noindent
+\begin{tikzpicture}[trim left=0pt,trim right=\linewidth]
+    \node[
+        anchor=north west,
+        inner xsep=0pt,
+        inner ysep=3.2mm,
+        minimum height=12mm,
+        text width=\dimexpr\linewidth-12mm\relax
+    ] (rq) at (5mm,0) {%
+        \textcolor{rqblue}{\textbf{#2:}}\, #3%
+        \if\relax\detokenize{#1}\relax\else
+          \par\vspace{3pt}{\small\textcolor{rqblue}{\textbf{TL;DR:}}\, #1}%
+        \fi
+    };
+    \begin{scope}[on background layer]
+      \path let \p1 = (rq.south) in
+          [fill=rqbg]
+          (0,0)
+          -- (\linewidth-3mm,0)
+          arc[start angle=90,end angle=0,radius=3mm]
+          -- (\linewidth,\y1+3mm)
+          arc[start angle=0,end angle=-90,radius=3mm]
+          -- (0,\y1)
+          -- cycle;
+      \path let \p1 = (rq.south) in
+          [draw=rqblue, line width=2.5pt] (0,0) -- (0,\y1);
+    \end{scope}
+\end{tikzpicture}
+\par\vspace{-6pt}%
+}
+% Allow modest extra stretch to avoid protruding text in the template.
+\setlength{\emergencystretch}{1em}

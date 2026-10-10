@@ -1,0 +1,87 @@
+\begin{table*}[t]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.13}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Dataset} &
+\textbf{Task} &
+\textbf{Input} &
+\textbf{Domain / Source} &
+\textbf{Answer format} &
+\textbf{Question type} &
+\textbf{Dataset scale} \\
+\midrule
+
+PubMedQA
+& Biomedical QA
+& Text
+& PubMed abstracts
+& Yes / No / Maybe
+& Research reasoning
+& 1K expert-labeled \\
+
+MedQA
+& Medical MCQA
+& Text
+& USMLE
+& 4 choices
+& Clinical / exam
+& 12.7K questions \\
+
+MedMCQA
+& Medical MCQA
+& Text
+& AIIMS / NEET-PG
+& 4 choices
+& Multi-subject exam
+& 194K+ questions \\
+
+\midrule
+
+VQA-RAD
+& Medical VQA
+& Image + Text
+& Radiology / MedPix
+& Open / closed
+& Clinical visual QA
+& 315 images / 3.5K QA \\
+
+SLAKE
+& Medical VQA
+& Image + Text
+& CT / MRI / X-ray
+& Open / closed
+& Visual + knowledge
+& 642 images / 14K QA \\
+
+PathVQA
+& Medical VQA
+& Image + Text
+& Pathology
+& Open-ended
+& Pathology visual QA
+& 5.0K images / 32.8K QA \\
+
+PMC-VQA
+& Medical VQA
+& Image + Text
+& Biomedical literature
+& Diverse answers
+& Biomedical visual QA
+& 149K images / 227K QA \\
+
+\bottomrule
+\end{tabular}%
+}
+
+\caption{
+Overview of the seven medical QA and VQA benchmarks used in our study.
+The datasets span text-only biomedical and clinical question answering as well
+as multimodal reasoning over radiology, pathology, and broader biomedical
+imagery.
+}
+\label{tab:dataset_stats}
+\end{table*}

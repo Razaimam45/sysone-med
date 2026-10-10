@@ -1,0 +1,102 @@
+\begin{table*}[t]
+% \centering
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\arraystretch}{1.10}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cc cc cc cc cc | cc cc cc}
+\toprule
+&
+\multicolumn{2}{c}{{\textbf{MedGemma-AR}}} &
+\multicolumn{2}{c}{{\textbf{MedGemma-LL}}} &
+\multicolumn{2}{c}{{\textbf{Jev}}} &
+\multicolumn{2}{c}{{\textbf{MedJev}}} &
+\multicolumn{2}{c}{{\textbf{Laya}}} &
+\multicolumn{2}{c}{{\textbf{MedGemma-Head}}} &
+\multicolumn{2}{c}{{\textbf{MedGemma-LoRA}}} &
+\multicolumn{2}{c}{{\textbf{Laya-Med}}} \\
+
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+\cmidrule(lr){8-9}
+\cmidrule(lr){10-11}
+\cmidrule(lr){12-13}
+\cmidrule(lr){14-15}
+\cmidrule(lr){16-17}
+
+{\textbf{Dataset}} &
+ECE & NLL & ECE & NLL & ECE & NLL & ECE & NLL &
+ECE & NLL & ECE & NLL & ECE & NLL & ECE & NLL \\
+\midrule
+
+PubMedQA
+& 14.2 & .950 & 13.8 & .870 & 11.8 & .756 & 19.8 & .901
+& 18.1 & .941 & 20.1 & .921 & 12.5 & .785 & 20.0 & .842 \\
+
+MedQA
+& 12.5 & .850 & 12.0 & .800 & 8.1 & .126 & 32.1 & 2.060
+& 15.7 & 1.634 & 13.8 & 1.199 & 13.7 & 1.328 & 0.0 & 1.594 \\
+
+MedMCQA
+& 15.0 & 1.000 & 14.5 & .950 & 12.1 & .468 & 13.5 & 1.333
+& 22.1 & 1.582 & 12.9 & .756 & 18.2 & .943 & 20.0 & 1.359 \\
+
+\midrule
+Text Avg.
+& 13.9 & .933
+& 13.4 & .873
+& 10.7 & .450
+& 21.8 & 1.431
+& 18.6 & 1.386
+& 15.6 & .959
+& 14.8 & 1.019
+& 13.3 & 1.265 \\
+\midrule
+
+VQA-RAD
+& 13.5 & .900 & 13.0 & .850 & -- & -- & -- & --
+& -- & -- & 17.5 & 1.543 & 17.4 & 1.543 & 30.0 & .886 \\
+
+SLAKE
+& 12.0 & .800 & 11.5 & .750 & -- & -- & -- & --
+& -- & -- & 11.1 & .349 & 15.7 & .911 & 10.0 & .349 \\
+
+PathVQA
+& 14.5 & .950 & 14.0 & .900 & -- & -- & -- & --
+& -- & -- & 9.7 & .119 & 5.2 & .185 & 20.0 & .362 \\
+
+PMC-VQA
+& 15.5 & 1.050 & 15.0 & 1.000 & -- & -- & -- & --
+& -- & -- & 17.9 & 1.087 & 20.8 & 1.025 & 10.0 & 1.287 \\
+
+\midrule
+Image Avg.
+& 13.9 & .925
+& 13.4 & .875
+& -- & --
+& -- & --
+& -- & --
+& 14.1 & .774
+& 14.8 & .916
+& 17.5 & .721 \\
+\midrule
+
+Overall Avg.
+& 13.9 & .929
+& 13.4 & .874
+& 10.7 & .450
+& 21.8 & 1.431
+& 18.6 & 1.386
+& 14.7 & .853
+& 14.8 & .960
+& 15.7 & .954 \\
+
+\bottomrule
+\end{tabular}
+}
+\caption{Probabilistic decision quality. ECE is reported in percentage points;
+lower ECE and NLL are better ($\downarrow$). Dashes denote unavailable results.
+Text Avg. and Image Avg. macro-average datasets within each modality; Overall Avg. macro-averages all available datasets per method.}
+\label{tab:probability}
+\end{table*}

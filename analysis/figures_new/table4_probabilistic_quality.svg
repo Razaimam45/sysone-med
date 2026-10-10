@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="2138.9986313379313" height="1036.506862675862" preserveAspectRatio="xMinYMin meet" viewBox="0 0 2138 1036" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="2138.9986313379313" height="1036.506862675862"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-1036)" style="clip-path: url(#clip)">
+		<g transform=" matrix(2.234483,0,0,2.234483,0,0)">
+			<rect x="82.0" y="300" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 82,300 L 227,300 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,103.102803,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,162.700609,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,222.298416,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">30</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 82,300 L 82,445 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,75,334.011524)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,385.62764)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,437.243756)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">3</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="211.731693950396" cy="376.11221053846566" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="208.231693950396" y="372.61221053846566" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="127.272 311.5441, 131.772 316.0441, 136.272 311.5441, 131.772 307.0441" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="217 438.5, 213.9689 433.25, 220.0311 433.25" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,183.06252,325.218541)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="92.0" cy="311.6380154146194" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="88.5" y="308.1380154146194" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="118.8223 310, 123.3223 314.5, 127.8223 310, 123.3223 305.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="190.0902 346.4913, 187.0591 341.2413, 193.1213 341.2413" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="82.0" y="456" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,912) scale(1,-1)">(a)  VQA-RAD</text>
+			<rect x="256.5" y="300" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 256.5,300 L 401.5,300 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,274.501336,293)">
+							<text x="-3.8173828125" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">5</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,315.554324,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,356.607312,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">15</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,397.6603,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 256.5,300 L 256.5,445 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,249.5,331.930442)">
+							<text x="-19.083984375" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">0.5</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,249.5,385.498478)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,249.5,439.066514)">
+							<text x="-19.083984375" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1.5</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="391.5" cy="435.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="388.0" y="431.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="280.544 310, 285.044 314.5, 289.544 310, 285.044 305.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="303.0134 359.8908, 299.9823 354.6408, 306.0445 354.6408" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,266.5,328.741587)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="300.3861605946974" cy="333.6528183124682" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="296.8861605946974" y="330.1528183124682" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="266.8716 320.4109, 271.3716 324.9109, 275.8716 320.4109, 271.3716 315.9109" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="326.1744 331.7106, 323.1433 326.4606, 329.2055 326.4606" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="256.5" y="456" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,912) scale(1,-1)">(b)  SLAKE</text>
+			<rect x="431.0" y="300" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 431,300 L 576,300 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,431,293)">
+							<text x="-3.8173828125" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,470.764101,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,510.528202,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,550.292303,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">30</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 431,300 L 431,445 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,424,355.766732)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,424,421.659939)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="565.721230452366" cy="435.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="562.221230452366" y="431.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="435.7552 310, 440.2552 314.5, 444.7552 310, 440.2552 305.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="461.7689 323.2594, 458.7379 318.0094, 464.8 318.0094" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,494.256878,317.463519)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="471.51330245811175" cy="333.82953710969326" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="468.01330245811175" y="330.32953710969326" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="432.7366 313.2107, 437.2366 317.7107, 441.7366 313.2107, 437.2366 308.7107" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="463.6157 321.48, 460.5846 316.23, 466.6468 316.23" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="431.0" y="456" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,912) scale(1,-1)">(c)  PathVQA</text>
+			<rect x="605.5" y="300" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 605.5,300 L 750.5,300 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,605.5,293)">
+							<text x="-3.8173828125" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,661.225651,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,716.951302,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">40</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 605.5,300 L 605.5,445 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,598.5,309.228264)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,598.5,349.44603)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,598.5,389.663795)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">3</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,598.5,429.881561)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">4</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="740.2199643906181" cy="435.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="736.7199643906181" y="431.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="611.6922 310.5726, 616.1922 315.0726, 620.6922 310.5726, 616.1922 306.0726" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="683.7124 340.7239, 680.6813 335.4739, 686.7435 335.4739" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,640.767695,319.916911)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="645.5796996235017" cy="318.33539856101015" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="642.0796996235017" y="314.83539856101015" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="607.2195 310, 611.7195 314.5, 616.2195 310, 611.7195 305.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="670.3937 327.974, 667.3626 322.724, 673.4248 322.724" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="605.5" y="456" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,912) scale(1,-1)">(d)  PMC-VQA</text>
+			<rect x="780.0" y="300" width="145.0" height="145" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="780.0" y="300" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 780,300 L 925,300 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,811.071162,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,857.412121,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,903.753081,293)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">30</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 780,300 L 780,445 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,773,340.389151)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,773,407.87901)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="915.0" cy="435.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="911.5" y="431.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="791.8109 310, 796.3109 314.5, 800.8109 310, 796.3109 305.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="849.7565 374.8416, 846.7254 369.5916, 852.7876 369.5916" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,829.616459,323.252785)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="812.070641393873" cy="323.11414165329234" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="808.570641393873" y="319.61414165329234" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="785.5 311.7167, 790 316.2167, 794.5 311.7167, 790 307.2167" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="842.7938 334.5228, 839.7627 329.2728, 845.8249 329.2728" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="780.0" y="456" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,912) scale(1,-1)">(e)  Image Average</text>
+			<rect x="82.0" y="104" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 82,104 L 227,104 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,121.849946,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,176.693965,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 82,104 L 82,249 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,75,119.882795)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,159.620009)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,199.357223)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">3</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,239.094437)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">4</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="217.00000000000003" cy="179.54371217241282" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="213.50000000000003" y="176.04371217241282" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="87.5 114.057, 92 118.557, 96.5 114.057, 92 109.557" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="204.2432 242.5, 201.2121 237.25, 207.2743 237.25" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,142.555068,116.838596)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="118.288289941868" cy="114.0" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="114.788289941868" y="110.5" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="93.64582 115.1148, 98.14582 119.6148, 102.6458 115.1148, 98.14582 110.6148" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="213.1012 167.057, 210.0701 161.807, 216.1323 161.807" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="82.0" y="260" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,520) scale(1,-1)">(f)  PubMedQA</text>
+			<rect x="256.5" y="104" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 256.5,104 L 401.5,104 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,314.948101,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,374.908243,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">40</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 256.5,104 L 256.5,249 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,249.5,151.361898)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,249.5,200.479091)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">3</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="391.5" cy="239.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="388.0" y="235.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="265.897 114, 270.397 118.5, 274.897 114, 270.397 109.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="362.3865 188.0499, 359.3554 182.7999, 365.4176 182.7999" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,278.323076,130.443595)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="308.8412339592869" cy="127.23713806106669" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="305.3412339592869" y="123.73713806106669" width="7.0" height="6.999999999999986" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="262 118.5239, 266.5 123.0239, 271 118.5239, 266.5 114.0239" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="335.6934 142.4114, 332.6624 137.1614, 338.7245 137.1614" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="256.5" y="260" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,520) scale(1,-1)">(g)  MedQA</text>
+			<rect x="431.0" y="104" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 431,104 L 576,104 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,431,97)">
+							<text x="-3.8173828125" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,467.28274,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,503.565481,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,539.848221,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">30</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 431,104 L 431,249 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,424,121.784284)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,424,177.195427)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,424,232.60657)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">3</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="565.7740743982458" cy="239.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="562.2740743982458" y="235.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="435.9295 114, 440.4295 118.5, 444.9295 114, 440.4295 109.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="470.7022 118.3539, 467.6711 113.1039, 473.7333 113.1039" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,481.171219,141.539474)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="462.0920045616437" cy="129.28983640188494" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="458.5920045616437" y="125.78983640188494" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="433.45 122.8268, 437.95 127.3268, 442.45 122.8268, 437.95 118.3268" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="512.9648 148.6153, 509.9337 143.3653, 515.9959 143.3653" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="431.0" y="260" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,520) scale(1,-1)">(h)  MedMCQA</text>
+			<rect x="605.5" y="104" width="145.0" height="145" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="605.5" y="104" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 605.5,104 L 750.5,104 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,639.038924,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,677.07305,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,715.107175,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">30</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 605.5,104 L 605.5,249 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,598.5,114.925719)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,598.5,173.076148)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,598.5,231.226578)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">3</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="740.5" cy="239.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="737.0" y="235.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="612.0937 114, 616.5937 118.5, 621.0937 114, 616.5937 109.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="692.0191 206.5865, 688.988 201.3365, 695.0502 201.3365" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,645.86816,131.479719)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="646.4973833017804" cy="124.54461964998706" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="642.9973833017804" y="121.04461964998706" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="611 119.389, 615.5 123.889, 620 119.389, 615.5 114.889" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="697.5463 162.3611, 694.5152 157.1111, 700.5774 157.1111" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="605.5" y="260" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,520) scale(1,-1)">(i)  Text Average</text>
+			<rect x="780.0" y="104" width="145.0" height="145" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="780.0" y="104" width="72.5" height="72.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,96%,100%); fill-rule: evenodd; fill-opacity: 0.75;"/>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 780,104 L 925,104 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,812.24947,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,854.624079,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,896.998689,97)">
+							<text x="-7.634765625" y="-12.0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-24) scale(1,-1)">30</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 780,104 L 780,249 Z" style="stroke: rgb(41%,44%,50%); stroke-linecap: butt; stroke-width: 0.6;"/>
+					</g>
+					<g transform=""/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,773,130.677723)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">1</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,773,193.821282)">
+							<text x="-7.634765625" y="-4.800000000000001" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(21%,25%,31%); stroke:none;" transform="translate(0,-9) scale(1,-1)">2</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<circle cx="915.0" cy="239.0" r="3.5" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<rect x="911.5" y="235.5" width="7.0" height="7.0" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="789.3198 114, 793.8198 118.5, 798.3198 114, 793.8198 109.5" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<polygon points="857.7603 191.7532, 854.7293 186.5032, 860.7914 186.5032" style="stroke: rgb(29%,47%,65%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					<g transform=" matrix(-1,0,-0,-1,825.200578,129.219878)">
+						<polygon points="0 4.5, -3.897114 -2.25, 3.897114 -2.25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+					</g>
+					<circle cx="816.3329851269" cy="125.91836055091346" r="3.5" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<rect x="812.8329851269" y="122.41836055091346" width="7.0" height="7.0" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="785.5 117.4257, 790 121.9257, 794.5 117.4257, 790 112.9257" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1.05; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+					<polygon points="856.7613 149.6165, 853.7302 144.3665, 859.7924 144.3665" style="stroke: rgb(94%,65%,35%); stroke-linecap: butt; stroke-width: 0.4; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="780.0" y="260" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,520) scale(1,-1)">(j)  Overall Average</text>
+			<g transform=" matrix(0,1,-1,0,22,372.5)">
+				<text x="-41.0361328125" y="0" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,0) scale(1,-1)">Image tasks</text>
+			</g>
+			<g transform=" matrix(0,1,-1,0,43,372.5)">
+				<text x="-18.1083984375" y="0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,0) scale(1,-1)">NLL ↓</text>
+			</g>
+			<g transform=" matrix(0,1,-1,0,22,176.5)">
+				<text x="-35.0390625" y="0" style="font-family: DejaVuSans-Bold; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,0) scale(1,-1)">Text tasks</text>
+			</g>
+			<g transform=" matrix(0,1,-1,0,43,176.5)">
+				<text x="-18.1083984375" y="0" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,0) scale(1,-1)">NLL ↓</text>
+			</g>
+			<text x="332.1407889375" y="50" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,100) scale(1,-1)">ECE (percentage points) ↓     Lower-left is better</text>
+			<circle cx="266.0958670625" cy="29" r="4.0" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,9%,15%); fill-rule: evenodd;"/>
+			<text x="277.0958670625" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">Gen</text>
+			<rect x="314.3829764375" y="25.0" width="8.0" height="8.0" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,9%,15%); fill-rule: evenodd;"/>
+			<text x="329.3829764375" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">LL</text>
+			<polygon points="355.7541 29, 359.7541 33, 363.7541 29, 359.7541 25" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,9%,15%); fill-rule: evenodd;"/>
+			<text x="370.7540701875" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">Head</text>
+			<polygon points="419.131 33, 415.6669 27, 422.5951 27" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,9%,15%); fill-rule: evenodd;"/>
+			<text x="430.1310233125" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">Adapt</text>
+			<g transform=" matrix(-1,0,-0,-1,482.632976,29)">
+				<polygon points="0 4, -3.464102 -2, 3.464102 -2" style="stroke: rgb(6%,9%,15%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,9%,15%); fill-rule: evenodd;"/>
+			</g>
+			<text x="493.6329764375" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">NAR</text>
+			<rect x="532.1564139375" y="25" width="10.0" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(29%,47%,65%); fill-rule: evenodd;"/>
+			<text x="547.1564139375" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">MedGemma</text>
+			<rect x="632.9239920625" y="25" width="10.0" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,65%,35%); fill-rule: evenodd;"/>
+			<text x="647.9239920625" y="25" style="font-family: DejaVuSans; font-size: 12px;fill: rgb(6%,9%,15%); stroke:none;" transform="translate(0,50) scale(1,-1)">Qwen</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,129 @@
+{
+  "checkpoint": "/home/razaimam/Documents/Projects/Jevify/models/laya-med/best.pt",
+  "manifest_sha256": "dc1a4fa88e008cd69015dc3744d375340e6ef919abdc925718e48a6c445ea287",
+  "split": "test",
+  "ablation": "none",
+  "seed": 42,
+  "batch_size": 8,
+  "device": "cuda",
+  "partial": true,
+  "examples": 8212,
+  "temperature": 15.58155616108888,
+  "raw": {
+    "per_dataset": {
+      "med_qa": {
+        "n": 1268,
+        "accuracy": 0.30126182965299686,
+        "nll": 1.5967843142862999,
+        "brier": 0.8001341303963324,
+        "ece": 0.1556254910028687
+      },
+      "medmcqa": {
+        "n": 2000,
+        "accuracy": 0.412,
+        "nll": 1.2685083958023746,
+        "brier": 0.6865077407433117,
+        "ece": 0.015272708498326421
+      },
+      "path_vqa": {
+        "n": 2000,
+        "accuracy": 0.878,
+        "nll": 0.621419350298517,
+        "brier": 0.21016697764012013,
+        "ece": 0.093173184760978
+      },
+      "pmc_vqa": {
+        "n": 1980,
+        "accuracy": 0.5277777777777778,
+        "nll": 1.4832985640036156,
+        "brier": 0.6647621022412431,
+        "ece": 0.2028347449901542
+      },
+      "pubmedqa": {
+        "n": 500,
+        "accuracy": 0.616,
+        "nll": 9.448626942294373,
+        "brier": 0.753005706455393,
+        "ece": 0.3726971540521722
+      },
+      "slake": {
+        "n": 355,
+        "accuracy": 0.8788732394366198,
+        "nll": 1.2872032099731068,
+        "brier": 0.24053660198911986,
+        "ece": 0.1211872166232882
+      },
+      "vqarad": {
+        "n": 109,
+        "accuracy": 0.5688073394495413,
+        "nll": 4.941215934641505,
+        "brier": 0.783475072172506,
+        "ece": 0.40008041119358695
+      }
+    },
+    "macro_accuracy": 0.5975314551881337,
+    "macro_nll": 2.9495795301856846
+  },
+  "calibrated": {
+    "per_dataset": {
+      "med_qa": {
+        "n": 1268,
+        "accuracy": 0.30126182965299686,
+        "nll": 1.586586537012557,
+        "brier": 0.790794017205354,
+        "ece": 0.08616259160964526
+      },
+      "medmcqa": {
+        "n": 2000,
+        "accuracy": 0.412,
+        "nll": 1.3693380685875176,
+        "brier": 0.7414424856172153,
+        "ece": 0.15186204992559577
+      },
+      "path_vqa": {
+        "n": 2000,
+        "accuracy": 0.878,
+        "nll": 0.45176094302708614,
+        "brier": 0.275828909447191,
+        "ece": 0.21000280809777166
+      },
+      "pmc_vqa": {
+        "n": 1980,
+        "accuracy": 0.5277777777777778,
+        "nll": 1.2769722616916628,
+        "brier": 0.6927766485903792,
+        "ece": 0.22544073699463177
+      },
+      "pubmedqa": {
+        "n": 500,
+        "accuracy": 0.616,
+        "nll": 0.9292401268300453,
+        "brier": 0.5376876423579638,
+        "ece": 0.1225716018038698
+      },
+      "slake": {
+        "n": 355,
+        "accuracy": 0.8788732394366198,
+        "nll": 0.38522799344782477,
+        "brier": 0.22531766784292187,
+        "ece": 0.13512096773236648
+      },
+      "vqarad": {
+        "n": 109,
+        "accuracy": 0.5688073394495413,
+        "nll": 0.6870411680210783,
+        "brier": 0.4892018502623392,
+        "ece": 0.13093731229639588
+      }
+    },
+    "macro_accuracy": 0.5975314551881337,
+    "macro_nll": 0.9551667283739674
+  },
+  "timing": {
+    "definition": "FP32 eval; one warmup; synchronized forward latency; pipeline includes preprocessing/transfers/output collection; loading excluded",
+    "forward_ms_per_example_p50": 4.852426762226969,
+    "forward_ms_per_example_p95": 19.972972891991958,
+    "pipeline_examples_per_second": 88.40904780619991,
+    "peak_cuda_allocated_bytes": 1433969152
+  }
+}

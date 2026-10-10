@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.20}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrrrr@{}}
+\toprule
+Formulation / policy & PubMedQA & MedQA & MedMCQA & VQA-RAD & SLAKE & PathVQA & PMC-VQA & Avg. \\
+\midrule
+\textbf{AR-LL} & 71.2 & 49.4 & 60.0 & 70.6 & 79.4 & 62.4 & 48.9 & 63.1 \\
+\quad + Routing & 72.5$^{2.4}$ & 50.8$^{6.9}$ & 60.9$^{3.0}$ & 71.3$^{0.9}$ & 80.1$^{2.5}$ & 63.1$^{4.2}$ & 49.6$^{3.1}$ & 64.0$^{3.3}$ \\
+\quad + Conformal & 75.5$^{11.2}$ & 56.4$^{35.3}$ & 65.8$^{22.0}$ & 77.4$^{14.7}$ & 82.4$^{13.5}$ & 67.1$^{29.6}$ & 53.8$^{24.8}$ & 68.3$^{21.6}$ \\
+\addlinespace[3pt]
+\textbf{MedJev} & 63.8 & 28.3 & 35.9 & -- & -- & -- & -- & 42.7 \\
+\quad + Routing & \textbf{76.5}$^{66.0}$ & 33.3$^{86.8}$ & 56.9$^{92.8}$ & -- & -- & -- & -- & 55.6$^{81.9}$ \\
+\quad + Conformal & 68.6$^{34.4}$ & 32.5$^{60.4}$ & 44.0$^{68.2}$ & -- & -- & -- & -- & 48.4$^{54.3}$ \\
+\addlinespace[3pt]
+\textbf{NAR (Laya)} & 56.6 & 21.1 & 27.6 & -- & -- & -- & -- & 35.1 \\
+\quad + Routing & 65.2$^{48.8}$ & 37.5$^{98.1}$ & 21.6$^{97.5}$ & -- & -- & -- & -- & 41.4$^{81.5}$ \\
+\quad + Conformal & 61.3$^{22.0}$ & 23.1$^{80.2}$ & 30.1$^{76.0}$ & -- & -- & -- & -- & 38.2$^{59.4}$ \\
+\addlinespace[3pt]
+\textbf{AR-Head} & 65.6 & 51.5 & 65.5 & 76.1 & 86.8 & 86.3 & 57.1 & 69.8 \\
+\quad + Routing & 75.9$^{51.0}$ & \textbf{77.0}$^{75.0}$ & \textbf{87.4}$^{56.7}$ & \textbf{78.1}$^{41.3}$ & 89.3$^{7.9}$ & 91.4$^{15.4}$ & \textbf{77.7}$^{71.4}$ & \textbf{82.4}$^{45.5}$ \\
+\quad + Conformal & 68.1$^{13.4}$ & 55.0$^{21.5}$ & 69.1$^{12.7}$ & 77.2$^{7.3}$ & 87.2$^{1.1}$ & 87.6$^{3.0}$ & 61.5$^{16.0}$ & 72.3$^{10.7}$ \\
+\addlinespace[3pt]
+\textbf{AR-Adapt} & 72.6 & 53.3 & 68.7 & 69.7 & 90.7 & 90.0 & 57.2 & 71.8 \\
+\quad + Routing & 73.0$^{3.0}$ & 57.1$^{16.0}$ & 81.7$^{32.9}$ & 70.4$^{0.9}$ & \textbf{91.6}$^{2.5}$ & 91.0$^{3.2}$ & 61.5$^{21.2}$ & 75.2$^{11.4}$ \\
+\quad + Conformal & 72.9$^{0.4}$ & 54.1$^{3.9}$ & 72.0$^{9.4}$ & 69.7$^{0.0}$ & 91.4$^{1.4}$ & 90.4$^{1.0}$ & 58.2$^{5.9}$ & 72.7$^{3.1}$ \\
+\addlinespace[3pt]
+\textbf{NAR-Med (Laya-Med)} & 64.0 & 30.4 & 40.8 & 56.0 & 80.0 & 86.8 & 45.4 & 57.6 \\
+\quad + Routing & 69.1$^{21.0}$ & --$^{100.0}$ & --$^{100.0}$ & 60.2$^{23.9}$ & 84.7$^{24.5}$ & \textbf{95.8}$^{45.1}$ & --$^{100.0}$ & 77.5$^{59.2}$ \\
+\quad + Conformal & 64.3$^{0.4}$ & 31.7$^{70.7}$ & 54.6$^{73.0}$ & 56.7$^{4.6}$ & 80.4$^{0.8}$ & 87.1$^{1.0}$ & 49.4$^{28.3}$ & 60.6$^{25.5}$ \\
+\addlinespace[3pt]
+\bottomrule
+\end{tabular*}
+\caption{Reference TTA evaluation: accuracy (\%) with routing at $\tau=0.7$ and conformal singleton selection at $\alpha=0.3$. Superscripts give abstention percentages. Bold marks the highest accuracy in each column, including ties. Accuracy averages exclude tasks with no accepted predictions; abstention averages include them. Dashes denote unsupported tasks or no accepted predictions.}
+\label{tab:tta_accuracy_abstention}
+\end{table*}
