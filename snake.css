@@ -1,0 +1,73 @@
+/* ---------- snake race layout (5 simultaneous panels) ---------- */
+.snake-main{max-width:1400px;margin:0 auto;padding:34px 5% 56px}
+.snake-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:22px}
+.snake-head h1{font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:-1.6px;margin:8px 0 10px}
+.snake-head p.muted{max-width:56ch;margin:0;font-size:14px}
+.snake-controls{display:flex;gap:8px;align-items:center}
+.snake-controls button,.snake-controls select{font:inherit;font-size:12px;font-weight:600;background:#fff;border:1px solid var(--border);
+  border-radius:9px;padding:11px 16px;cursor:pointer;transition:.15s}
+.snake-controls button:hover{border-color:#c7d3da}
+.snake-controls .primary{background:var(--teal-d);color:#fff;border-color:var(--teal-d)}
+.snake-controls .primary:hover{background:var(--teal)}
+.snake-controls .ctl{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);
+  border-radius:9px;padding:0 12px;font-size:12px;font-weight:600;color:var(--muted)}
+.snake-controls .ctl input{font:inherit;font-size:13px;font-weight:700;color:var(--ink);width:52px;
+  border:0;background:transparent;padding:11px 0;text-align:center;font-variant-numeric:tabular-nums}
+.snake-controls .ctl input:focus{outline:none}
+.snake-controls .ctl input::-webkit-outer-spin-button,.snake-controls .ctl input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.snake-controls .ctl input[type=number]{-moz-appearance:textfield}
+
+.snake-status{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--border);
+  border-radius:12px;padding:12px 18px;margin-bottom:18px;font-size:13px}
+.snake-status .clock{font-variant-numeric:tabular-nums;font-size:13px}
+.snake-status .clock b{font-size:16px}
+
+/* grid of 5 simultaneous race panels */
+.race-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:22px}
+.race-panel{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;position:relative;transition:box-shadow .2s}
+.race-panel.leading{box-shadow:0 0 0 2px var(--c),0 14px 30px #172f3e1c}
+.race-panel .rp-head{display:flex;align-items:center;gap:8px;padding:11px 13px;border-bottom:1px solid var(--border)}
+.race-panel .rp-head .sw{width:11px;height:11px;border-radius:3px;flex:none}
+.race-panel .rp-head .nm{font-size:13px;font-weight:700;letter-spacing:-.2px}
+.race-panel .rp-head .ms{margin-left:auto;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.race-panel .rp-canvas{position:relative;background:radial-gradient(ellipse at center,#16232b,#0d161c)}
+.race-panel .rp-canvas canvas{display:block;width:100%;height:auto}
+.race-panel .rp-foot{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;border-top:1px solid var(--border)}
+.race-panel .rp-foot .ap{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.race-panel .rp-foot .ap b{font-size:16px}
+.race-panel .rp-foot .mps{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.race-panel .rp-badge{position:absolute;top:9px;right:9px;font-size:9px;font-weight:700;letter-spacing:.5px;
+  background:#0d161cd9;color:#fff;border-radius:999px;padding:4px 9px;opacity:0;transition:opacity .2s}
+.race-panel.leading .rp-badge{opacity:1}
+.race-panel .rp-badge.win{background:var(--c);color:#0d161c}
+.race-panel.dead{opacity:.55}
+.race-panel.dead .rp-head .nm::after{content:" · crashed";color:#c0563f;font-size:10px}
+
+/* leaderboard strip */
+.board-strip{padding:18px 20px}
+.board-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.board-top h3{font-size:14px;font-weight:600;margin:0}
+.board-top .muted{font-size:10px}
+.lb-row{display:grid;grid-template-columns:14px 1fr auto auto;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--border)}
+.lb-row:last-child{border-bottom:0}
+.lb-row .sw{width:12px;height:12px;border-radius:3px}
+.lb-row .nm{font-size:13px;font-weight:600}
+.lb-row .nm small{display:block;font-size:10px;color:var(--muted);font-weight:500}
+.lb-row .bar{height:6px;background:#eef2f5;border-radius:6px;overflow:hidden;min-width:120px}
+.lb-row .bar i{display:block;height:100%;border-radius:6px}
+.lb-row .ap{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+.lb-row.dead{opacity:.5}
+.lb-row.dead .nm::after{content:" · crashed";color:#c0563f;font-size:10px}
+.board-foot{font-size:11px;margin:14px 0 0;line-height:1.55}
+
+/* how-the-race-works explanation */
+.explain{margin-top:22px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 26px;box-shadow:var(--shadow)}
+.explain h2{font-size:18px;font-weight:600;letter-spacing:-.4px;margin:0 0 18px}
+.explain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.explain .ex h3{font-size:13px;font-weight:700;color:var(--teal-d);margin:0 0 6px}
+.explain .ex p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.6}
+
+@media(max-width:1100px){ .race-grid{grid-template-columns:repeat(3,1fr)} .explain-grid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:720px){ .race-grid{grid-template-columns:repeat(2,1fr)} .lb-row .bar{display:none} }
+@media(max-width:460px){ .race-grid{grid-template-columns:1fr} .explain-grid{grid-template-columns:1fr} }
