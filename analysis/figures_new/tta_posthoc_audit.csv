@@ -1,8 +1,0 @@
-method,n,routing_conformal_prediction_disagreements,routing_source,conformal_source
-MedGemma-LL,8212,46,tta_results/medgemma_ll_tta/routing.json,tta_results/medgemma_ll_tta/conformal.json
-MedGemma-Head,8212,0,tta_results/medgemma_direct_headonly_tta/routing.json,tta_results/medgemma_direct_headonly_tta/conformal.json
-MedGemma-Adapt,8212,0,tta_results/medgemma_direct_lora_tta/routing.json,tta_results/medgemma_direct_lora_tta/conformal.json
-MedGemma-NAR,8212,0,tta_results/laya_med_vl_tta/routing.json,tta_results/laya_med_vl_tta/conformal.json
-Qwen-LL,8212,1167,tta_results/qwen_ll_tta/routing.json,tta_results/qwen_ll_tta/conformal.json
-Qwen-Head,8212,0,tta_results/qwen_direct_headonly_tta/routing.json,tta_results/qwen_direct_headonly_tta/conformal.json
-Qwen-Adapt,8212,0,tta_results/qwen_direct_lora_tta/routing.json,tta_results/qwen_direct_lora_tta/conformal.json

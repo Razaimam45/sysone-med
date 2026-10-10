@@ -18,8 +18,47 @@ data/
 models/
 tta_results/
 
-# ---- Build artifacts (regenerate with: python demo2/build_pages.py) ----
-demo2/site/
+# ---- Not part of the research repo (kept locally, not committed) ----
+# paper sources, demos, analysis notebooks, recorded results, TTA, and other
+# backbones are local-only; the repo ships the code to reproduce the 5 methods.
+Jevify/
+demo/
+demo2/
+analysis/
+results/
+experiment_results/
+tta/
+latex/
+figures/
+figures2/
+experiments/
+update_pareto_cell.py
+ollama.md
+
+# Other backbones / extra methods (kept locally, not part of the 5-method repo)
+baselines/run_internvl3_direct_headonly.py
+baselines/run_internvl3_direct_lora.py
+baselines/run_laya.py
+baselines/run_laya_tta.py
+baselines/run_medjev.py
+baselines/run_qwen_direct_headonly.py
+baselines/run_qwen_direct_lora.py
+training/benchmark_laya_scaling.py
+training/evaluate_medgemma_direct.py
+training/quicktest_medgemma.py
+training/reorganize_data.py
+training/run_laya_med.py
+training/run_medgemma_direct_headonly.py
+training/run_medgemma_direct_lora.py
+training/verification.json
+tests/test_experiment_suite.py
+tests/test_medjev_adapter.py
+tests/test_tta_assets.py
+tests/test_tta_calibrated.py
+tests/test_tta_policies.py
+tests/test_tta_prior.py
+utils/archive/
+utils/make_paper_assets.py
 
 # ---- Notebooks / caches ----
 .ipynb_checkpoints/
