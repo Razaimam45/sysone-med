@@ -1,17 +1,19 @@
 # SysOne-Med
 
-**System One for medical decisions.** An empirical study that dissects the
-*Jev / MedJev* alternative approach by breaking it down into its decision
-formulations — toward **decision-one modelling** for medical reasoning.
+**System One for medical decisions.** This project dissects how direct decision
+models like **Jev** work by breaking the decision down into its constituent
+formulations and rebuilding it, step by step, on a single medical backbone
+(**MedGemma**) — from slow autoregressive writing all the way to a single
+non-autoregressive scoring pass.
 
 Given the same clinical question and the same answer choices, *how* a model turns
-that input into a decision changes both its **accuracy** and its **latency**. This
-repo reproduces the paper's decision formulations on **MedGemma** (plus the hosted
-**Jev** baseline and the **LayaMed** non-autoregressive model) across seven medical
-datasets, and reports accuracy, calibration, and p50 decision latency.
+that input into a decision changes both its **accuracy** and its **latency**. We
+reproduce each decision formulation on **MedGemma** (plus the hosted **Jev**
+baseline and the **LayaMed** non-autoregressive model) across seven medical
+datasets, and report accuracy, calibration, and p50 decision latency.
 
 > ### 🚀 Try it yourself
-> **<https://sysone-med.github.io>** — explore the decision paths on real SLAKE /
+> **<https://razaimam45.github.io/sysone-med/>** — explore the decision paths on real SLAKE /
 > MedQA cases in the **Medical VQA** observatory, or race them side by side in the
 > **Snake race**. No install, no GPU — it replays saved measurements.
 
@@ -19,19 +21,32 @@ datasets, and reports accuracy, calibration, and p50 decision latency.
 
 ## The decision formulations
 
-The same inputs (image `I`, question `q`, candidates `A`) in every panel — only the
-decision interface changes.
+A **decision model** answers a multiple-choice question by assigning a score to each
+candidate and picking the best — without necessarily *writing* an answer. This project
+dissects that idea by starting from the most familiar way a language model answers
+(free-text generation) and progressively removing the autoregressive machinery, until
+the decision is a single direct scoring pass. Every formulation below is run on the
+**same inputs** (image `I`, question `q`, candidates `A`) and the **same held-out
+rows**, so the only thing that changes is *how the decision is made*.
 
 ![Four decision formulations](docs/decision_formulations.png)
 
-| Method | Backbone | Decision interface | Script |
+| Method | Full form | What it does | Script |
 | --- | --- | --- | --- |
-| **Jev** | hosted JEV API | direct decision (API) | `baselines/run_jev.py` |
-| **AR-Gen** | MedGemma 1.5-4B | autoregressive · 32-token generation | `baselines/run_ar.py` |
-| **AR-LL** | MedGemma 1.5-4B | autoregressive · native one-token | `baselines/run_ll.py` |
-| **AR-Head** | MedGemma 1.5-4B (frozen) | decision head (head-only) | `baselines/run_direct_headonly.py` |
-| **AR-Adapt** | MedGemma 1.5-4B (frozen) | decision head + LoRA adapters | `baselines/run_direct_lora.py` |
-| **NAR** | LayaMed (multimodal) | non-autoregressive decision | `baselines/run_laya_med.py` |
+| **Jev** | Jev (hosted decision API) | A hosted model that scores the candidates directly — the reference "direct decision" system we dissect. | `baselines/run_jev.py` |
+| **AR-Gen** | Autoregressive · Generative | MedGemma writes free text (up to 32 tokens), one token at a time; the text is parsed into a choice. The slowest, most familiar path. | `baselines/run_ar.py` |
+| **AR-LL** | Autoregressive · Label Likelihood | The same MedGemma emits exactly one token; its probability is the choice score. Drops the multi-token writing. | `baselines/run_ll.py` |
+| **AR-Head** | Autoregressive backbone · Decision Head | A frozen MedGemma backbone feeds a small trained head that scores every option at once — no tokens are written. | `baselines/run_direct_headonly.py` |
+| **AR-Adapt** | Autoregressive backbone · Decision Head + LoRA | AR-Head plus low-rank (LoRA) adapters that adapt the frozen backbone to the decision task. | `baselines/run_direct_lora.py` |
+| **NAR** | Non-Autoregressive (LayaMed) | Text and image are encoded once and a shared head scores all candidates in a single forward pass — no autoregressive decoding at all. | `baselines/run_laya_med.py` |
+
+**The progression.** Reading left to right, each step removes more of the
+autoregressive "write-then-parse" machinery:
+
+- **AR-Gen → AR-LL:** stop writing a full answer; read the decision off a single token.
+- **AR-LL → AR-Head:** stop generating tokens entirely; score the options with a learned head on a frozen backbone.
+- **AR-Head → AR-Adapt:** keep the head, but adapt the backbone with LoRA so it helps the decision.
+- **AR-Adapt → NAR:** drop the autoregressive backbone altogether — encode once, score all candidates in one pass.
 
 The **NAR** path encodes text and image once (PubMedBERT + BiomedCLIP, LoRA-adapted),
 fuses them, and scores all candidates with a shared, calibrated decision head —
