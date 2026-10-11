@@ -1,59 +1,182 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SysOne-Med · biomedia</title><link rel="stylesheet" href="style.css"></head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SysOne-Med · biomedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-<header><a href="../index.html" class="brand"><span class="logo">S.</span> SYSONE-MED <span class="divider">/</span> <span class="muted">biomedia</span></a><span class="badge">● &nbsp; QA + VQA BENCHMARK</span></header>
-<main>
-  <div class="intro"><div><p class="eyebrow">SAME QUESTION. DIFFERENT PATHS.</p><h1>Every decision, in focus.</h1><p class="muted">Explore how medical models answer, how certain they are, and how long they take.</p></div><span class="edition">INFERENCE<br>OBSERVATORY <b>01</b></span></div>
-  <section class="overview">
-    <div><span class="eyebrow">EVALUATION SET</span><strong id="overviewDataset">SLAKE</strong><small id="overviewDescription">Visual question answering</small></div>
-    <div><span class="eyebrow">UNIQUE QUESTIONS</span><strong id="overviewCases">355</strong><small>Held-out test cases</small></div>
-    <div><span class="eyebrow">MODELS COMPARED</span><strong id="overviewModels">03</strong><small>Same question & choices</small></div>
-    <div><span class="eyebrow" id="overviewProgressLabel">STREAM PROGRESS</span><strong id="overviewProgress">0%</strong><small id="overviewPass">First pass</small></div>
-  </section>
-  <section class="toolbar">
-    <div><span class="status-dot"></span><strong id="modeLabel">Throughput race</strong><small id="datasetInfo"></small></div>
-    <div class="controls">
-      <select id="dataset" aria-label="Dataset"><option value="slake">SLAKE · VQA</option><option value="med_qa">MedQA · QA</option></select>
-      <select id="inferenceMode" aria-label="Inference mode"><option value="stored">Stored inference</option></select>
-      <select id="speed" aria-label="Playback rate"><option value="1000">1 images / sec</option><option value="200">5 images / sec</option><option value="40">25 images / sec</option></select>
-      <button id="previous" aria-label="Previous question">←</button><button id="next" aria-label="Next question">→</button><button id="reset" title="Restart stream">↺ Reset</button><button id="play" class="primary" disabled>▶ Play stream</button>
+  <header><a href="../index.html" class="brand"><span class="logo">S.</span> SYSONE-MED <span class="divider">/</span> <span
+        class="muted">biomedia</span></a><span class="badge">● &nbsp; QA + VQA BENCHMARK</span></header>
+  <main>
+    <div class="intro">
+      <div>
+        <p class="eyebrow">SAME QUESTION. DIFFERENT PATHS.</p>
+        <h1>Every decision, in focus.</h1>
+        <p class="muted">Explore how medical models answer, how certain they are, and how long they take.</p>
+      </div><span class="edition">INFERENCE<br>OBSERVATORY <b>01</b></span>
     </div>
-  </section>
-  <p id="raceNote" class="race-note" hidden>Each model works through the same queue at its own measured speed. The preview rate only controls the question/image viewer. Cards show each model’s latest completed case; their metrics may cover different numbers of questions. Saved-measurement replay, not live inference.</p>
-  <div class="progress"><div id="progress"></div></div><div class="stream-meta"><span id="position"></span><span id="runStatus">Preparing comparison…</span></div>
-  <input id="seek" type="range" min="0" value="0" aria-label="Inspect sample" style="width:100%;accent-color:#267c78;margin:0 0 22px">
-  <section class="case-grid">
-    <article class="panel image-panel">
-      <div class="panel-top"><span class="eyebrow">THE INPUT</span><span class="tag" id="taskTag">SLAKE / TEST</span></div>
-      <div class="scan"><span class="scan-label" id="scanLabel">MEDICAL IMAGE</span><img id="scan" alt="SLAKE medical question image" hidden><span id="imageError">Preparing scans…</span></div>
-      <div class="image-caption"><span id="sampleId"></span><span id="cycle"></span></div>
-      <div class="image-actions"><span id="imageIdentity"></span><button id="nextImage">Next image ↗</button></div>
-    </article>
-    <article class="panel question-panel"><div class="panel-top"><span class="eyebrow" id="questionType">VISUAL QUESTION ANSWERING</span><span id="optionCount" class="muted"></span></div><h2 id="question"></h2><div id="options" class="options"></div><p class="subtle">Green marks the reference answer for this case.</p></article>
-  </section>
-  <div class="section-title"><h2 id="pathsTitle">Three inference paths</h2><span class="muted">Measured predictions · individual model progress</span></div>
-  <section id="cards" class="cards"></section>
-  <section id="racePanel" class="panel throughput-panel" hidden>
-    <div class="panel-top"><h3>Completed samples over time</h3><span class="tag">SHARED CLOCK · INDEPENDENT WORKERS</span></div>
-    <canvas id="throughput" role="img" aria-label="Completed samples per model versus replay seconds"></canvas>
-    <p class="subtle">One sequential worker per model, using saved per-case latency. No waiting for another model. Original hardware and batching conditions still apply.</p>
-  </section>
-  <div class="section-title"><div><h2>The stream tells the story.</h2><p class="muted">Cumulative metrics by scored sample. Hover to inspect a point.</p></div><div id="legend" class="legend"></div></div>
-  <section class="plots">
-    <article class="panel"><div class="panel-top"><h3>Accuracy & confidence</h3><select id="metric" aria-label="Metric"><option value="accuracy">Accuracy</option><option value="confidence">Mean confidence</option><option value="brier">Brier score ↓</option><option value="ece">Calibration error ↓</option></select></div><canvas id="quality" role="img" aria-label="Progressive quality comparison"></canvas><p class="subtle" id="qualityHelp"></p></article>
-    <article class="panel"><div class="panel-top"><h3>Time to a decision</h3><span class="tag">CUMULATIVE MEAN · MS</span></div><canvas id="latency" role="img" aria-label="Progressive latency comparison"></canvas><p class="subtle">Recorded timings retain their original hardware and batching conditions.</p></article>
-  </section>
-  <section class="panel table-panel"><div class="panel-top"><h3>Stream scorecard</h3><button id="export">↓ Export CSV</button></div><div class="table-scroll"><table><thead><tr><th>Model</th><th>Scored</th><th>Accuracy ↑</th><th>Confidence</th><th>Mean latency ↓</th><th>P95 latency ↓</th><th>Brier ↓</th><th>ECE ↓</th></tr></thead><tbody id="scorecard"></tbody></table></div></section>
-  <details class="panel methodology"><summary>How to read this experiment</summary>
-    <p>The 1,000-step SLAKE stream cycles through 355 unique held-out questions, alternating image groups. Repeats are labeled and are not independent measurements. MedQA uses 1,000 unique held-out questions.</p>
-    <p>Aligned comparison uses the same completed sample prefix for all models. Throughput race replays each model independently using cumulative saved latency, starting with zero completed samples on one shared clock. Pausing freezes that clock; resuming continues it. Preview speed and scrubbing do not change model throughput. The race estimates sequential throughput from original measurements; it is not a new hardware benchmark or live inference.</p>
-    <p>Race cards show different cases. Use “Inspect latest” to view the image, question, and options for a model’s most recent result. Quality plots use scored sample index; the throughput plot uses elapsed replay time.</p>
-    <p>Confidence is the predicted answer’s probability. Invalid AR outputs count as errors. Saved logits use their calibration temperature, and collected probabilities are preserved. Brier sums squared errors; ECE uses 10 equal-width confidence bins. All results come from stored measurements, including your collected MedJev run.</p>
-    <p>MedJev is text-only and appears in MedQA. SLAKE compares AR Gen, AR Head, AR LL, and NAR (Laya-Med). Scans are preloaded and decoded once before playback, then reused across questions.</p><p id="sources"></p>
-  </details>
-  <section class="section-title"><div><span class="eyebrow">UNDER THE HOOD</span><h2>How each path reaches a decision</h2><p class="muted">The inference mechanism behind every model in this comparison — from the first prompt to the final choice.</p></div></section>
-  <section id="mechanism" class="panel mechanism-panel"></section>
-  <footer>biomedia <span>SysOne-Med · Inspect the decision. Understand the trade-off.</span></footer>
-</main><div id="tooltip" class="tooltip" hidden></div><script src="race.js"></script><script src="app.js"></script>
-</body></html>
+    <section class="overview">
+      <div><span class="eyebrow">EVALUATION SET</span><strong id="overviewDataset">SLAKE</strong><small
+          id="overviewDescription">Visual question answering</small></div>
+      <div><span class="eyebrow">UNIQUE QUESTIONS</span><strong id="overviewCases">355</strong><small>Held-out test
+          cases</small></div>
+      <div><span class="eyebrow">MODELS COMPARED</span><strong id="overviewModels">03</strong><small>Same question &
+          choices</small></div>
+      <div><span class="eyebrow" id="overviewProgressLabel">STREAM PROGRESS</span><strong
+          id="overviewProgress">0%</strong><small id="overviewPass">First pass</small></div>
+    </section>
+    <section class="toolbar">
+      <div><span class="status-dot"></span><strong id="modeLabel">Throughput race</strong><small
+          id="datasetInfo"></small></div>
+      <div class="controls">
+        <select id="dataset" aria-label="Dataset">
+          <option value="slake">SLAKE · VQA</option>
+          <option value="med_qa">MedQA · QA</option>
+        </select>
+        <select id="inferenceMode" aria-label="Inference mode">
+          <option value="stored">Stored inference</option>
+          <option value="live">Run inference</option>
+        </select>
+        <select id="speed" aria-label="Playback rate">
+          <option value="1000">1 images / sec</option>
+          <option value="200">5 images / sec</option>
+          <option value="40">25 images / sec</option>
+        </select>
+        <button id="previous" aria-label="Previous question">←</button><button id="next"
+          aria-label="Next question">→</button><button id="reset" title="Restart stream">↺ Reset</button><button
+          id="play" class="primary" disabled>▶ Play stream</button>
+      </div>
+    </section>
+    <p id="raceNote" class="race-note" hidden>Each model works through the same queue at its own measured speed. The
+      preview rate only controls the question/image viewer. Cards show each model’s latest completed case; their metrics
+      may cover different numbers of questions. Saved-measurement replay, not live inference.</p>
+    <div class="progress">
+      <div id="progress"></div>
+    </div>
+    <div class="stream-meta"><span id="position"></span><span id="runStatus">Preparing comparison…</span></div>
+    <input id="seek" type="range" min="0" value="0" aria-label="Inspect sample"
+      style="width:100%;accent-color:#267c78;margin:0 0 22px">
+    <section class="case-grid">
+      <article class="panel image-panel">
+        <div class="panel-top"><span class="eyebrow">THE INPUT</span><span class="tag" id="taskTag">SLAKE / TEST</span>
+        </div>
+        <div class="scan"><span class="scan-label" id="scanLabel">MEDICAL IMAGE</span><img id="scan"
+            alt="SLAKE medical question image" hidden><span id="imageError">Preparing scans…</span></div>
+        <div class="image-caption"><span id="sampleId"></span><span id="cycle"></span></div>
+        <div class="image-actions"><span id="imageIdentity"></span><button id="nextImage">Next image ↗</button></div>
+      </article>
+      <article class="panel question-panel">
+        <div class="panel-top"><span class="eyebrow" id="questionType">VISUAL QUESTION ANSWERING</span><span
+            id="optionCount" class="muted"></span></div>
+        <h2 id="question"></h2>
+        <div id="options" class="options"></div>
+        <p class="subtle">Green marks the reference answer for this case.</p>
+      </article>
+    </section>
+    <div class="section-title">
+      <h2 id="pathsTitle">Three inference paths</h2><span class="muted">Measured predictions · individual model
+        progress</span>
+    </div>
+    <section id="cards" class="cards"></section>
+    <section class="panel stream-panel">
+      <div class="panel-top">
+        <h3>Decision stream</h3><span class="tag">LIVE · ONE ROW PER DECISION</span>
+      </div>
+      <p class="subtle">Every decision a model makes, as it completes cases — the answer it picked, its confidence, and
+        the measured latency. Newest first.</p>
+      <div class="decision-stream" id="decisionStream"></div>
+    </section>
+    <section id="racePanel" class="panel throughput-panel" hidden>
+      <div class="panel-top">
+        <h3>Completed samples over time</h3><span class="tag">SHARED CLOCK · INDEPENDENT WORKERS</span>
+      </div>
+      <canvas id="throughput" role="img" aria-label="Completed samples per model versus replay seconds"></canvas>
+      <p class="subtle">One sequential worker per model, using saved per-case latency. No waiting for another model.
+        Original hardware and batching conditions still apply.</p>
+    </section>
+    <div class="section-title">
+      <div>
+        <h2>The stream tells the story.</h2>
+        <p class="muted">Cumulative metrics by scored sample. Hover to inspect a point.</p>
+      </div>
+      <div id="legend" class="legend"></div>
+    </div>
+    <section class="plots">
+      <article class="panel">
+        <div class="panel-top">
+          <h3>Accuracy & confidence</h3><select id="metric" aria-label="Metric">
+            <option value="accuracy">Accuracy</option>
+            <option value="confidence">Mean confidence</option>
+            <option value="brier">Brier score ↓</option>
+            <option value="ece">Calibration error ↓</option>
+          </select>
+        </div><canvas id="quality" role="img" aria-label="Progressive quality comparison"></canvas>
+        <p class="subtle" id="qualityHelp"></p>
+      </article>
+      <article class="panel">
+        <div class="panel-top">
+          <h3>Time to a decision</h3><span class="tag">CUMULATIVE MEAN · MS</span>
+        </div><canvas id="latency" role="img" aria-label="Progressive latency comparison"></canvas>
+        <p class="subtle">Recorded timings retain their original hardware and batching conditions.</p>
+      </article>
+    </section>
+    <section class="panel table-panel">
+      <div class="panel-top">
+        <h3>Stream scorecard</h3><button id="export">↓ Export CSV</button>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Scored</th>
+              <th>Accuracy ↑</th>
+              <th>Confidence</th>
+              <th>Mean latency ↓</th>
+              <th>P95 latency ↓</th>
+              <th>Brier ↓</th>
+              <th>ECE ↓</th>
+            </tr>
+          </thead>
+          <tbody id="scorecard"></tbody>
+        </table>
+      </div>
+    </section>
+    <details class="panel methodology">
+      <summary>How to read this experiment</summary>
+      <p>The 1,000-step SLAKE stream cycles through 355 unique held-out questions, alternating image groups. Repeats are
+        labeled and are not independent measurements. MedQA uses 1,000 unique held-out questions.</p>
+      <p>Aligned comparison uses the same completed sample prefix for all models. Throughput race replays each model
+        independently using cumulative saved latency, starting with zero completed samples on one shared clock. Pausing
+        freezes that clock; resuming continues it. Preview speed and scrubbing do not change model throughput. The race
+        estimates sequential throughput from original measurements; it is not a new hardware benchmark or live
+        inference.</p>
+      <p>Race cards show different cases. Use “Inspect latest” to view the image, question, and options for a model’s
+        most recent result. Quality plots use scored sample index; the throughput plot uses elapsed replay time.</p>
+      <p>Confidence is the predicted answer’s probability. Invalid AR outputs count as errors. Saved logits use their
+        calibration temperature, and collected probabilities are preserved. Brier sums squared errors; ECE uses 10
+        equal-width confidence bins. All results come from stored measurements, including your collected MedJev run.</p>
+      <p>MedJev is text-only and appears in MedQA. SLAKE compares AR Gen, AR Head, AR LL, and NAR (Laya-Med). Scans are
+        preloaded and decoded once before playback, then reused across questions.</p>
+      <p id="sources"></p>
+    </details>
+    <section class="section-title">
+      <div><span class="eyebrow">UNDER THE HOOD</span>
+        <h2>How each path reaches a decision</h2>
+        <p class="muted">The inference mechanism behind every model in this comparison — from the first prompt to the
+          final choice.</p>
+      </div>
+    </section>
+    <section id="mechanism" class="panel mechanism-panel"></section>
+    <footer>biomedia <span>SysOne-Med · Inspect the decision. Understand the trade-off.</span></footer>
+  </main>
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="race.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

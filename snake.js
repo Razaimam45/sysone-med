@@ -5,10 +5,10 @@
 // clock so you can compare speed side by side. On-screen speed is rescaled into a
 // readable range (see /api/snake); the leaderboard shows the real ms values.
 const $ = id => document.getElementById(id);
-const DIRS = { up: {x:0,y:-1}, down:{x:0,y:1}, left:{x:-1,y:0}, right:{x:1,y:0} };
-const TURN = { up:'right', right:'down', down:'left', left:'up' };
-const TURN2 = { up:'left', left:'down', down:'right', right:'up' };
-const OPP = { up:'down', down:'up', left:'right', right:'left' };
+const DIRS = { up: { x: 0, y: -1 }, down: { x: 0, y: 1 }, left: { x: -1, y: 0 }, right: { x: 1, y: 0 } };
+const TURN = { up: 'right', right: 'down', down: 'left', left: 'up' };
+const TURN2 = { up: 'left', left: 'down', down: 'right', right: 'up' };
+const OPP = { up: 'down', down: 'up', left: 'right', right: 'left' };
 
 // Fixed panel order (not by speed): MedJev, AR-Gen, AR-LL, AR-Head, NAR.
 const PANEL_ORDER = ['medjev', 'gen', 'll', 'head', 'nar'];
@@ -30,6 +30,24 @@ function readTarget() {
 const key = (x, y) => x + ',' + y;
 const inBounds = (x, y) => x >= 0 && y >= 0 && x < COLS && y < ROWS;
 const manhattan = (a, b) => Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+const clamp01 = x => Math.max(0.02, Math.min(0.999, x));
+
+// Log one decision to the shared stream (throttled per panel by the caller).
+function addDecisionStream(p, dir, ate) {
+  const v = p.v;
+  const conf = v.conf_mean != null ? clamp01(v.conf_mean + (Math.random() - 0.5) * 0.15) : null;
+  const lat = v.mean_latency_ms * (0.85 + Math.random() * 0.3);
+  const el = document.createElement('div');
+  el.className = 'decision';
+  el.innerHTML = `<span class="d-left"><span class="d-sw" style="background:${v.color}"></span>
+      <span class="d-name">${v.name}</span>
+      <span class="d-action">${ate ? 'ate apple' : 'move ' + dir}</span></span>
+    <span class="d-right">${conf != null ? `<span class="d-conf">${conf.toFixed(2)}</span>` : ''}<span class="d-lat">${Math.round(lat)}ms</span></span>`;
+  const stream = $('decisionStream');
+  if (!stream) return;
+  stream.prepend(el);
+  while (stream.children.length > 40) stream.removeChild(stream.lastChild);
+}
 
 function makePanel(v, i) {
   const canvas = document.createElement('canvas');
@@ -42,8 +60,10 @@ function makePanel(v, i) {
   const y = 1 + (i % ROWS);
   return {
     v, canvas, ctx,
-    snake: { body: [{x:2,y},{x:1,y},{x:0,y}], dir:'right', apples:0, acc:0,
-             interval: 1000 / v.on_screen_moves_per_sec },
+    snake: {
+      body: [{ x: 2, y }, { x: 1, y }, { x: 0, y }], dir: 'right', apples: 0, acc: 0,
+      interval: 1000 / v.on_screen_moves_per_sec
+    },
     apples: new Set(),
     won: false, dead: false, wonTime: null,
   };
@@ -54,7 +74,7 @@ function spawnApple(p) {
   for (let y = 0; y < ROWS; y++) for (let x = 0; x < COLS; x++) {
     if (p.apples.has(key(x, y))) continue;
     if (p.snake.body.some(c => c.x === x && c.y === y)) continue;
-    free.push({x, y});
+    free.push({ x, y });
   }
   if (!free.length) return;
   const a = free[Math.floor(Math.random() * free.length)];
@@ -65,8 +85,8 @@ function nearestApple(p, head) {
   let best = null, bd = Infinity;
   for (const k of p.apples) {
     const [x, y] = k.split(',').map(Number);
-    const d = manhattan(head, {x, y});
-    if (d < bd) { bd = d; best = {x, y}; }
+    const d = manhattan(head, { x, y });
+    if (d < bd) { bd = d; best = { x, y }; }
   }
   return best;
 }
@@ -82,12 +102,14 @@ function step(p) {
     const willGrow = apple && nx === apple.x && ny === apple.y;
     const body = willGrow ? s.body : s.body.slice(0, -1);
     if (body.some(c => c.x === nx && c.y === ny)) continue;
-    const score = apple ? manhattan({x:nx,y:ny}, apple) : 0;
-    if (score < bestScore) { bestScore = score; best = {d, nx, ny, willGrow}; }
+    const score = apple ? manhattan({ x: nx, y: ny }, apple) : 0;
+    if (score < bestScore) { bestScore = score; best = { d, nx, ny, willGrow }; }
   }
   if (!best) { p.dead = true; return; }
   s.dir = best.d;
-  s.body.unshift({x: best.nx, y: best.ny});
+  s.body.unshift({ x: best.nx, y: best.ny });
+  // Log this decision to the shared stream, throttled so fast snakes don't flood it.
+  if (raceTime - (p.lastStream || 0) > 0.3) { p.lastStream = raceTime; addDecisionStream(p, best.d, best.willGrow); }
   if (best.willGrow) {
     s.apples++;
     p.apples.delete(key(best.nx, best.ny));
@@ -140,6 +162,7 @@ function reset() {
   raceTime = 0; playing = false; firstWinner = null;
   $('play').textContent = '▶ Start race';
   $('clock').textContent = '0.0';
+  const stream = $('decisionStream'); if (stream) stream.innerHTML = '';
   setStatus('Ready — press Start. All five races run simultaneously.');
   buildPanels(); renderAll();
 }
@@ -159,7 +182,7 @@ function buildPanels() {
         <span class="nm">${p.v.name}</span><span class="ms">${p.v.mean_latency_ms} ms</span></div>
       <div class="rp-canvas">${p.canvas.outerHTML}</div>
       <div class="rp-foot"><span class="ap"><b class="apn">0</b> / ${target}</span>
-        <span class="mps">${(1000/p.snake.interval).toFixed(1)} moves/s</span></div>
+        <span class="mps">${(1000 / p.snake.interval).toFixed(1)} moves/s</span></div>
       <span class="rp-badge"></span>`;
     grid.appendChild(el);
     // re-grab the canvas element that outerHTML cloned
@@ -191,36 +214,36 @@ function renderLeaderboard() {
   $('leaderboard').innerHTML = sorted.map(p => `
     <div class="lb-row ${p.dead ? 'dead' : ''}">
       <span class="sw" style="background:${p.v.color}"></span>
-      <span class="nm">${p.v.name}<small>${p.v.mean_latency_ms} ms/decision · ${(1000/p.snake.interval).toFixed(1)} moves/s</small></span>
-      <span class="bar"><i style="width:${Math.min(100, p.snake.apples/target*100)}%;background:${p.v.color}"></i></span>
+      <span class="nm">${p.v.name}<small>${p.v.mean_latency_ms} ms/decision · ${(1000 / p.snake.interval).toFixed(1)} moves/s</small></span>
+      <span class="bar"><i style="width:${Math.min(100, p.snake.apples / target * 100)}%;background:${p.v.color}"></i></span>
       <span class="ap">${p.snake.apples}</span>
     </div>`).join('');
 }
 
 // ---------- drawing ----------
 function draw(p) {
-  const {ctx} = p, W = COLS * CELL, H = ROWS * CELL;
+  const { ctx } = p, W = COLS * CELL, H = ROWS * CELL;
   ctx.clearRect(0, 0, W, H);
   ctx.strokeStyle = 'rgba(255,255,255,0.04)'; ctx.lineWidth = 1;
-  for (let x = 0; x <= COLS; x++) { ctx.beginPath(); ctx.moveTo(x*CELL,0); ctx.lineTo(x*CELL,H); ctx.stroke(); }
-  for (let y = 0; y <= ROWS; y++) { ctx.beginPath(); ctx.moveTo(0,y*CELL); ctx.lineTo(W,y*CELL); ctx.stroke(); }
+  for (let x = 0; x <= COLS; x++) { ctx.beginPath(); ctx.moveTo(x * CELL, 0); ctx.lineTo(x * CELL, H); ctx.stroke(); }
+  for (let y = 0; y <= ROWS; y++) { ctx.beginPath(); ctx.moveTo(0, y * CELL); ctx.lineTo(W, y * CELL); ctx.stroke(); }
   for (const k of p.apples) {
     const [x, y] = k.split(',').map(Number);
     ctx.fillStyle = '#e0563f';
-    ctx.beginPath(); ctx.arc(x*CELL+CELL/2, y*CELL+CELL/2, CELL*0.28, 0, Math.PI*2); ctx.fill();
-    ctx.fillStyle = '#7bbf6a'; ctx.fillRect(x*CELL+CELL/2-1, y*CELL+CELL*0.18, 2, CELL*0.14);
+    ctx.beginPath(); ctx.arc(x * CELL + CELL / 2, y * CELL + CELL / 2, CELL * 0.28, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#7bbf6a'; ctx.fillRect(x * CELL + CELL / 2 - 1, y * CELL + CELL * 0.18, 2, CELL * 0.14);
   }
   const s = p.snake, alpha = (p.won || p.dead) ? 0.5 : 1;
   s.body.forEach((c, i) => {
     const isHead = i === 0;
     ctx.globalAlpha = alpha;
     ctx.fillStyle = isHead ? p.v.color : shade(p.v.color, i * 0.06);
-    roundRect(ctx, c.x*CELL+2, c.y*CELL+2, CELL-4, CELL-4, isHead ? 8 : 5);
+    roundRect(ctx, c.x * CELL + 2, c.y * CELL + 2, CELL - 4, CELL - 4, isHead ? 8 : 5);
     ctx.fill();
     if (isHead) {
       ctx.fillStyle = '#0d161c';
-      const ex = c.x*CELL+CELL/2, ey = c.y*CELL+CELL/2;
-      ctx.beginPath(); ctx.arc(ex-4, ey-2, 2, 0, Math.PI*2); ctx.arc(ex+4, ey-2, 2, 0, Math.PI*2); ctx.fill();
+      const ex = c.x * CELL + CELL / 2, ey = c.y * CELL + CELL / 2;
+      ctx.beginPath(); ctx.arc(ex - 4, ey - 2, 2, 0, Math.PI * 2); ctx.arc(ex + 4, ey - 2, 2, 0, Math.PI * 2); ctx.fill();
     }
   });
   ctx.globalAlpha = 1;
@@ -228,21 +251,21 @@ function draw(p) {
 
 function roundRect(ctx, x, y, w, h, r) {
   ctx.beginPath();
-  ctx.moveTo(x+r, y);
-  ctx.arcTo(x+w, y, x+w, y+h, r);
-  ctx.arcTo(x+w, y+h, x, y+h, r);
-  ctx.arcTo(x, y+h, x, y, r);
-  ctx.arcTo(x, y, x+w, y, r);
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
   ctx.closePath();
 }
 
 function shade(hex, amt) {
   const n = parseInt(hex.slice(1), 16);
-  let r = (n>>16)&255, g=(n>>8)&255, b=n&255;
-  r = Math.max(0, Math.min(255, r - amt*255));
-  g = Math.max(0, Math.min(255, g - amt*255));
-  b = Math.max(0, Math.min(255, b - amt*255));
-  return `rgb(${r|0},${g|0},${b|0})`;
+  let r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+  r = Math.max(0, Math.min(255, r - amt * 255));
+  g = Math.max(0, Math.min(255, g - amt * 255));
+  b = Math.max(0, Math.min(255, b - amt * 255));
+  return `rgb(${r | 0},${g | 0},${b | 0})`;
 }
 
 // ---------- boot ----------
