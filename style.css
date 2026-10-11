@@ -306,6 +306,16 @@ nav a.cta:hover {
   color: #c0392b
 }
 
+.play-card.anaphylaxis .play-icon {
+  background: #fde3e0;
+  color: #a52a1e
+}
+
+.play-card.icu .play-icon {
+  background: #e7eefb;
+  color: #3f6bb5
+}
+
 .play-card .play-kind {
   font-size: 9.5px;
   font-weight: 700;
@@ -376,6 +386,24 @@ nav a.cta:hover {
 
 .play-card.triage .play-go .btn:hover {
   background: #c0392b
+}
+
+.play-card.anaphylaxis .play-go .btn {
+  background: #a52a1e;
+  color: #fff
+}
+
+.play-card.anaphylaxis .play-go .btn:hover {
+  background: #c0392b
+}
+
+.play-card.icu .play-go .btn {
+  background: #3f6bb5;
+  color: #fff
+}
+
+.play-card.icu .play-go .btn:hover {
+  background: #4f7cc9
 }
 
 .play-card .play-go small {

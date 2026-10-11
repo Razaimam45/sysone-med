@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SysOne-Med · Alarm Storm — ICU throughput</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icu.css">
+</head>
+
+<body class="dark">
+    <header class="dark">
+        <a href="index.html" class="brand"><span class="logo">S.</span> SYSONE-MED <span class="divider">/</span> <span
+                class="muted">icu</span></a>
+        <nav>
+            <a href="/">← Briefing</a>
+            <a href="triage.html">Triage</a>
+            <a href="anaphylaxis.html">Closing Door</a>
+            <a href="icu.html" class="cta">Alarm Storm</a>
+        </nav>
+    </header>
+
+    <main class="icu-main">
+        <div class="icu-head">
+            <div>
+                <p class="eyebrow">ICU telemetry · alarm storm · throughput</p>
+                <h1>Alarm Storm</h1>
+                <p class="muted">
+                    Ten ICU patients alarm at once — a full <b>alarm storm</b>. Five triage teams race to clear the
+                    alarms, each one triaging a patient at its own <b>measured latency</b>. The fast paths clear the
+                    whole storm; the slow ones can barely keep up. This is a <b>throughput</b> race: in a storm, the
+                    model that can't triage fast is useless, no matter how accurate it is.
+                </p>
+            </div>
+            <div class="icu-ctrl">
+                <label class="ctl"><span>Shift length</span>
+                    <input id="shift" type="range" min="200" max="2000" step="50" value="800"
+                        aria-label="Shift length in ms">
+                    <b id="shiftVal">800 ms</b>
+                </label>
+                <label class="ctl"><span>Playback</span>
+                    <select id="mult" aria-label="Playback speed">
+                        <option value="0.25">0.25× (slow-mo)</option>
+                        <option value="0.5" selected>0.5×</option>
+                        <option value="1">1×</option>
+                    </select>
+                </label>
+                <div class="ctl-btns">
+                    <button id="play" class="primary">▶ Play</button>
+                    <button id="reset">↺ Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="icu-stats" id="icuStats">
+            <div class="tstat">
+                <div class="n" id="stShifts">0</div>
+                <div class="l">SHIFTS</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stBest">—</div>
+                <div class="l">BEST THROUGHPUT</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stWorst">—</div>
+                <div class="l">SLOWEST THROUGHPUT</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stSpread">—</div>
+                <div class="l">SPEED SPREAD</div>
+            </div>
+        </div>
+
+        <!-- the 10-bed unit -->
+        <section class="panel unit-panel">
+            <div class="unit-top">
+                <span class="case-tag">ICU · 10 BEDS</span>
+                <span class="case-num" id="stormNum">STORM 0001</span>
+            </div>
+            <div class="unit-sub muted">Unit throughput — beds stabilize as the fastest path clears them</div>
+            <div class="beds" id="beds"><!-- 10 beds injected --></div>
+        </section>
+
+        <!-- the five triage teams -->
+        <div class="section-title">
+            <h2>Five triage teams, one storm</h2><span class="muted">each clears alarms at its measured latency</span>
+        </div>
+        <section class="teams" id="teams"><!-- 5 team cards injected --></section>
+
+        <!-- decision stream -->
+        <section class="panel board-strip">
+            <div class="board-top">
+                <h3>Decision stream</h3><span class="muted">every triage: patient · confidence · latency ·
+                    outcome</span>
+            </div>
+            <div class="stream" id="stream"></div>
+        </section>
+
+        <section class="explain">
+            <h2>How this race works</h2>
+            <div class="explain-grid">
+                <div class="ex">
+                    <h3>The storm is the workload</h3>
+                    <p>Ten patients alarm at once. Each triage team must clear them one at a time — a real ICU
+                        alarm storm is a <b>throughput</b> problem, not a single-decision problem.</p>
+                </div>
+                <div class="ex">
+                    <h3>Throughput = shift ÷ latency</h3>
+                    <p>A team clears a patient every <b>measured latency</b>. In a fixed shift, the number it clears
+                        is the shift length divided by its latency. Fast path → many; slow path → almost none.</p>
+                </div>
+                <div class="ex">
+                    <h3>Accuracy doesn't help here</h3>
+                    <p>In a storm, a model that takes a second to triage one patient can't keep up at all. The
+                        spread in throughput is the story — not the accuracy.</p>
+                </div>
+                <div class="ex">
+                    <h3>Shorten the shift to test</h3>
+                    <p>Drag the shift length. At 800 ms the fast paths clear the whole storm and the slowest clears
+                        almost nothing; at 2000 ms even the slow autoregressive path catches up a little.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dark">
+        <div class="wrap">
+            <span><b>biomedia</b> · SysOne-Med</span>
+            <span>Latencies are the real measured numbers — playback speed only changes how fast you watch.</span>
+        </div>
+    </footer>
+
+    <script src="icu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SysOne-Med · The Closing Door — anaphylaxis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anaphylaxis.css">
+</head>
+
+<body class="dark">
+    <header class="dark">
+        <a href="index.html" class="brand"><span class="logo">S.</span> SYSONE-MED <span class="divider">/</span> <span
+                class="muted">anaphylaxis</span></a>
+        <nav>
+            <a href="/">← Briefing</a>
+            <a href="triage.html">Triage</a>
+            <a href="icu.html">ICU storm</a>
+            <a href="anaphylaxis.html" class="cta">Closing Door</a>
+        </nav>
+    </header>
+
+    <main class="ana-main">
+        <div class="ana-head">
+            <div>
+                <p class="eyebrow">Anaphylaxis · the airway is closing</p>
+                <h1>The Closing Door</h1>
+                <p class="muted">
+                    A patient is going into anaphylactic shock and the airway is <b>collapsing in real time</b>.
+                    Every path races to inject <b>epinephrine</b> before the door shuts. Each one takes its own
+                    measured latency — the fast paths get the shot in while the airway is still open; the slow ones
+                    arrive to a closed airway and a code blue. <b>Seconds are the whole game.</b>
+                </p>
+            </div>
+            <div class="ana-ctrl">
+                <label class="ctl"><span>Airway closure time</span>
+                    <input id="closure" type="range" min="200" max="3000" step="50" value="600"
+                        aria-label="Airway closure time in ms">
+                    <b id="closureVal">600 ms</b>
+                </label>
+                <label class="ctl"><span>Playback</span>
+                    <select id="mult" aria-label="Playback speed">
+                        <option value="0.25">0.25× (slow-mo)</option>
+                        <option value="0.5" selected>0.5×</option>
+                        <option value="1">1×</option>
+                    </select>
+                </label>
+                <div class="ctl-btns">
+                    <button id="play" class="primary">▶ Play</button>
+                    <button id="reset">↺ Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ana-stats" id="anaStats">
+            <div class="tstat">
+                <div class="n" id="stPatients">0</div>
+                <div class="l">PATIENTS</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stSaved">0</div>
+                <div class="l">SAVED IN TIME</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stCode">0</div>
+                <div class="l">CODE BLUES</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stFastest">—</div>
+                <div class="l">FASTEST EPINEPHRINE</div>
+            </div>
+        </div>
+
+        <!-- the closing airway -->
+        <section class="panel airway-panel">
+            <div class="airway-top">
+                <span class="case-tag" id="caseTag">ANAPHYLAXIS</span>
+                <span class="case-num" id="caseNum">PATIENT 0001</span>
+            </div>
+            <div class="airway-state" id="caseState">Peanut exposure · Stridor 88 dB · SpO₂ 84% · HR 138</div>
+
+            <div class="airway" id="airway">
+                <div class="door left" id="doorL"></div>
+                <div class="door right" id="doorR"></div>
+                <div class="airway-core">
+                    <div class="breath" id="breath">🫁</div>
+                    <div class="patency" id="patency">100%</div>
+                    <div class="patency-lbl">AIRWAY PATENCY</div>
+                </div>
+            </div>
+
+            <div class="airway-legend">
+                <span class="lg"><i class="dot open"></i> open — epinephrine still possible</span>
+                <span class="lg"><i class="dot crit"></i> critical — &lt; 25% patency</span>
+                <span class="lg"><i class="dot closed"></i> closed — code blue</span>
+            </div>
+        </section>
+
+        <!-- the five racers -->
+        <div class="section-title">
+            <h2>Five paths, one closing airway</h2><span class="muted">each injects at its measured latency</span>
+        </div>
+        <section class="racers" id="racers"><!-- 5 racer cards injected --></section>
+
+        <!-- decision stream -->
+        <section class="panel board-strip">
+            <div class="board-top">
+                <h3>Decision stream</h3><span class="muted">every injection: confidence · latency · outcome</span>
+            </div>
+            <div class="stream" id="stream"></div>
+        </section>
+
+        <section class="explain">
+            <h2>How this race works</h2>
+            <div class="explain-grid">
+                <div class="ex">
+                    <h3>The door is the deadline</h3>
+                    <p>The airway closes continuously. Patency falls from 100% to 0% over the closure time. Below
+                        25% it's critical; at 0% the patient codes.</p>
+                </div>
+                <div class="ex">
+                    <h3>Epinephrine must beat the door</h3>
+                    <p>Each path injects at its <b>measured mean latency</b>. If it lands while the airway is still
+                        open, it saves the patient; if the door shuts first, it's a code blue.</p>
+                </div>
+                <div class="ex">
+                    <h3>Confidence is real</h3>
+                    <p>Every injection carries the path's <b>measured confidence</b>. The stream logs confidence,
+                        latency, and whether it beat the closing door.</p>
+                </div>
+                <div class="ex">
+                    <h3>Speed the closure to test</h3>
+                    <p>Drag the closure time. At 600 ms only the fast paths get the shot in; at 3000 ms even the
+                        slowest autoregressive path makes it. The spread is the story.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dark">
+        <div class="wrap">
+            <span><b>biomedia</b> · SysOne-Med</span>
+            <span>Latencies are the real measured numbers — playback speed only changes how fast you watch.</span>
+        </div>
+    </footer>
+
+    <script src="anaphylaxis.js"></script>
+</body>
+
+</html>
