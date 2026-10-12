@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SysOne-Med · Dose or Hold — medication timing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dose.css">
+</head>
+
+<body class="dark">
+    <header class="dark">
+        <a href="index.html" class="brand"><span class="logo">S.</span> SYSONE-MED <span class="divider">/</span> <span
+                class="muted">dose</span></a>
+        <nav>
+            <a href="/">← Briefing</a>
+            <a href="snake.html">Snake</a>
+            <a href="triage.html">Triage</a>
+            <a href="anaphylaxis.html">Closing Door</a>
+            <a href="icu.html">Alarm Storm</a>
+            <a href="monitor.html">The Monitor</a>
+            <a href="dose.html" class="cta">Dose or Hold</a>
+        </nav>
+    </header>
+
+    <main class="dose-main">
+        <div class="dose-head">
+            <div>
+                <p class="eyebrow">Medication timing · accuracy + speed</p>
+                <h1>Dose or Hold</h1>
+                <p class="muted">
+                    A glucose trace scrolls and a dosing beat arrives at the decision line. The level is
+                    <b>ABOVE TARGET</b> (→ GIVE) or <b>IN RANGE</b> (→ HOLD). All five models face the same beat, but
+                    each decides at its <b>measured latency</b> and with its <b>measured accuracy</b>. A correct,
+                    in-time call keeps the patient stable; a wrong or too-slow call — an over-dose or a missed dose —
+                    drains that model's stability bar. When a bar hits zero the model flatlines, so <b>both accuracy
+                    and speed decide who survives.</b>
+                </p>
+            </div>
+            <div class="dose-ctrl">
+                <label class="ctl"><span>Decision window</span>
+                    <input id="window" type="range" min="100" max="2000" step="50" value="400"
+                        aria-label="Decision window in ms">
+                    <b id="windowVal">400 ms</b>
+                </label>
+                <label class="ctl"><span>Playback</span>
+                    <select id="mult" aria-label="Playback speed">
+                        <option value="0.25">0.25× (slow-mo)</option>
+                        <option value="0.5" selected>0.5×</option>
+                        <option value="1">1×</option>
+                    </select>
+                </label>
+                <div class="ctl-btns">
+                    <button id="play" class="primary">▶ Play</button>
+                    <button id="reset">↺ Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dose-stats" id="doseStats">
+            <div class="tstat">
+                <div class="n" id="stBeats">0</div>
+                <div class="l">DOSING BEATS</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stAlive">5</div>
+                <div class="l">MODELS ALIVE</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stLeader">—</div>
+                <div class="l">LEADING (STABILITY)</div>
+            </div>
+            <div class="tstat">
+                <div class="n" id="stWindow">400 ms</div>
+                <div class="l">DECISION WINDOW</div>
+            </div>
+        </div>
+
+        <!-- glucose trace -->
+        <section class="panel trace-panel">
+            <div class="trace-top">
+                <span class="trace-tag" id="traceTag">—</span>
+                <span class="trace-num" id="traceNum">BEAT 0000</span>
+            </div>
+            <div class="trace-stage">
+                <canvas id="glucose"></canvas>
+                <div class="target-band"></div>
+                <div class="decision-line"></div>
+                <div class="beat-marker" id="marker"><span id="markerLabel">—</span></div>
+            </div>
+            <div class="trace-legend">
+                <span><i class="dot give"></i> ABOVE TARGET → <b>GIVE</b></span>
+                <span><i class="dot hold"></i> IN RANGE → <b>HOLD</b></span>
+                <span class="muted">the window tightens as more beats arrive</span>
+            </div>
+        </section>
+
+        <!-- the five models -->
+        <div class="section-title">
+            <h2>Five models, one patient</h2><span class="muted">each keeps its own stability bar</span>
+        </div>
+        <section class="models" id="models"><!-- 5 model cards injected --></section>
+
+        <!-- decision stream -->
+        <section class="panel board-strip">
+            <div class="board-top">
+                <h3>Decision stream</h3><span class="muted">every call: beat · action · confidence · latency · outcome</span>
+            </div>
+            <div class="stream" id="stream"></div>
+        </section>
+
+        <!-- results -->
+        <section class="panel results" id="results" hidden>
+            <div class="board-top">
+                <h3>Shift results</h3><span class="muted">who kept the patient stable the longest</span>
+            </div>
+            <div class="results-grid" id="resultsGrid"></div>
+        </section>
+
+        <section class="explain">
+            <h2>How this game works</h2>
+            <div class="explain-grid">
+                <div class="ex">
+                    <h3>One beat = one call</h3>
+                    <p>A dosing beat arrives at the decision line. The right move is GIVE when glucose is above
+                        target, HOLD when it's in range — the same timing call a clinician makes.</p>
+                </div>
+                <div class="ex">
+                    <h3>Speed and accuracy both count</h3>
+                    <p>Each model decides at its <b>measured latency</b>. If it's slower than the window it's too late
+                        and the call is wrong. If it's in time, it's correct only with its <b>measured accuracy</b>.</p>
+                </div>
+                <div class="ex">
+                    <h3>The stability bar</h3>
+                    <p>A correct call nudges stability up; a wrong or late call — an over-dose or a missed dose —
+                        drains it. A low-accuracy model survives a few beats before flatlining.</p>
+                </div>
+                <div class="ex">
+                    <h3>Widen the window to test</h3>
+                    <p>At 400 ms the slow autoregressive path is always too late. Drag to 2000 ms and even it gets a
+                        shot — but its accuracy still decides how long it lasts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dark">
+        <div class="wrap">
+            <span><b>biomedia</b> · SysOne-Med</span>
+            <span>Latencies and accuracy are the real measured numbers — playback speed only changes how fast you
+                watch.</span>
+        </div>
+    </footer>
+
+    <script src="dose.js"></script>
+</body>
+
+</html>

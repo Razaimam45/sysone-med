@@ -316,6 +316,16 @@ nav a.cta:hover {
   color: #3f6bb5
 }
 
+.play-card.monitor .play-icon {
+  background: #e6f6ef;
+  color: #1f8a5b
+}
+
+.play-card.dose .play-icon {
+  background: #fdeede;
+  color: #b06a1e
+}
+
 .play-card .play-kind {
   font-size: 9.5px;
   font-weight: 700;
@@ -404,6 +414,24 @@ nav a.cta:hover {
 
 .play-card.icu .play-go .btn:hover {
   background: #4f7cc9
+}
+
+.play-card.monitor .play-go .btn {
+  background: #1f8a5b;
+  color: #fff
+}
+
+.play-card.monitor .play-go .btn:hover {
+  background: #27a06b
+}
+
+.play-card.dose .play-go .btn {
+  background: #b06a1e;
+  color: #fff
+}
+
+.play-card.dose .play-go .btn:hover {
+  background: #c87d2b
 }
 
 .play-card .play-go small {

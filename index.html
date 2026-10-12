@@ -38,7 +38,7 @@
       <div class="chips">
         <span class="chip"><b>5</b> decision variants</span>
         <span class="chip"><b>7</b> medical datasets</span>
-        <span class="chip"><b>5</b> interactive playgrounds</span>
+        <span class="chip"><b>7</b> interactive playgrounds</span>
         <span class="chip">saved measurements · no live GPU</span>
       </div>
     </div>
@@ -49,7 +49,7 @@
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Playground</p>
-        <h2>Five ways to feel a decision model</h2>
+        <h2>Seven ways to feel a decision model</h2>
         <p>Each one replays the same five variants — but from a different angle. Every action shows the
           decision it made, how confident it was, and how long it took.</p>
       </div>
@@ -89,6 +89,20 @@
           <p>Ten patients alarm at once. Five triage teams race on throughput — each clears alarms at its
             measured latency. In a storm, the model that can't triage fast is useless, no matter how accurate.</p>
           <div class="play-go"><span class="btn">Clear the storm →</span><small>throughput · 10 beds</small></div>
+        </a>
+        <a class="play-card monitor" href="monitor.html">
+          <div class="play-top"><span class="play-icon">📈</span><span class="play-kind">ALARM INTERPRETATION</span></div>
+          <h3>The Monitor</h3>
+          <p>Alarms slide toward the decision line — ACT for a true alarm, HOLD for a false one. Each model
+            decides at its measured latency and accuracy, and a wrong or late call drains its stability bar.</p>
+          <div class="play-go"><span class="btn">Read the alarms →</span><small>accuracy + speed</small></div>
+        </a>
+        <a class="play-card dose" href="dose.html">
+          <div class="play-top"><span class="play-icon">💉</span><span class="play-kind">MEDICATION TIMING</span></div>
+          <h3>Dose or Hold</h3>
+          <p>A glucose trace scrolls and a dosing beat arrives — GIVE above target, HOLD in range. Over-dosing or
+            missing a dose drains the stability bar, so both accuracy and speed decide who survives.</p>
+          <div class="play-go"><span class="btn">Time the dose →</span><small>give vs. hold</small></div>
         </a>
       </div>
     </div>
